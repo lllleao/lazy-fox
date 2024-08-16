@@ -5,11 +5,11 @@ export const HeroSection = styled.section`
     align-items: center;
     /* justify-content: center; */
     height: 100%;
-    gap: 4rem;
+    gap: 8rem;
     flex: 1 1 100%;
     font-family: Barlow;
     .logo {
-        max-width: 650px;
+        max-width: 450px;
         width: 100%;
     }
 
@@ -19,11 +19,10 @@ export const HeroSection = styled.section`
         button {
             font-size: 1rem;
             padding: 0.5rem 1rem;
-            background-color: #ff7f00;
+            background-color: #222;
             border: none;
             border-radius: 0.5rem;
             cursor: pointer;
-            color: #000;
         }
     }
 `
