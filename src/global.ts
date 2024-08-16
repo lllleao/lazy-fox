@@ -13,12 +13,5 @@ const Global = createGlobalStyle`
         width: 100%;
         margin: 0 auto;
     }
-
-    @font-face {
-        font-family: Barlow;
-        src: url(src/assets/fonts/barlowregular.ttf) format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
 `
 export default Global
