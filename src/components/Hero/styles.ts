@@ -7,13 +7,15 @@ export const HeroSection = styled.section`
     height: 100%;
     gap: 8rem;
     flex: 1 1 100%;
-    font-family: Barlow;
     .logo {
         max-width: 450px;
         width: 100%;
     }
 
     .desc {
+        font-family: Barlow;
+        font-weight: normal;
+
         font-size: 2rem;
         p {
             margin-bottom: 1rem;
