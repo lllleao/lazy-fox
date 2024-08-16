@@ -15,7 +15,9 @@ export const HeroSection = styled.section`
 
     .desc {
         font-size: 2rem;
-
+        p {
+            margin-bottom: 1rem;
+        }
         button {
             font-size: 1rem;
             padding: 0.5rem 1rem;
