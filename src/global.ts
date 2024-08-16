@@ -16,7 +16,7 @@ const Global = createGlobalStyle`
 
     @font-face {
         font-family: Barlow;
-        src: url(./assets/fonts/Barlow/Barlow-Regular.ttf) format('truetype');
+        src: url(./src/assets/fonts/Barlow/Barlow-Regular.ttf) format('truetype');
         font-weight: normal;
         font-style: normal;
     }
