@@ -13,7 +13,7 @@ export const HeroSection = styled.section`
     }
 
     .desc {
-        font-family: Barlow;
+        font-family: 'Barlow';
         font-weight: normal;
 
         font-size: 2rem;
