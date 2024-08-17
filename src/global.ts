@@ -1,11 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
+    :root {
+        --font-primary: 'Barlow';
+    }
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         color: #fff;
+        list-style: none;
     }
 
     .container {

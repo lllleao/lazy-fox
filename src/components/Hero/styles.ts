@@ -1,32 +1,40 @@
 import styled from 'styled-components'
 
 export const HeroSection = styled.section`
+    padding-top: 6rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 20vh;
     /* justify-content: center; */
-    height: 100%;
-    gap: 8rem;
-    flex: 1 1 100%;
+    align-items: center;
+
     .logo {
-        max-width: 450px;
+        max-width: 350px;
         width: 100%;
     }
 
     .desc {
-        font-family: 'Barlow';
-        font-weight: normal;
+        padding: 1rem;
+        border-radius: 1rem;
+        max-width: 750px;
+        /* width: 100%; */
+        /* height: 100%; */
+        aspect-ratio: 16 / 9;
+        background-color: #222;
+    }
+`
+export const CellHome = styled.div`
+    position: relative;
+    top: -20%;
+    left: 35%;
+    .cell {
+        width: 200px;
+    }
 
-        font-size: 2rem;
-        p {
-            margin-bottom: 1rem;
-        }
-        button {
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #222;
-            border: none;
-            border-radius: 0.5rem;
-            cursor: pointer;
-        }
+    .post {
+        position: absolute;
+        top: 57px;
+        left: 15px;
+        width: 170px;
     }
 `
