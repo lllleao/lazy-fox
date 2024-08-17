@@ -18,6 +18,7 @@ export const ShowHome = styled.div`
     padding: 1rem;
     border-radius: 1rem;
     max-width: 750px;
+    width: 100%;
     aspect-ratio: 16 / 9;
     background-color: #222;
     z-index: 1;
@@ -43,20 +44,19 @@ export const CellHome = styled.div`
     position: relative;
     top: -20%;
     left: 35%;
-    width: max-content;
+    width: 200px;
+    height: 104%;
+    overflow: hidden;
+    border-radius: 2.2rem;
     .cell {
-        width: 200px;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        overflow: hidden;
+        z-index: 3;
     }
 
-    .post {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 179px;
-        height: 387px;
-        z-index: -1;
-        border-radius: 1rem;
-        object-fit: cover;
-        border-radius: 1rem;
+    &:hover video {
+        transform: translateY(-104%);
     }
 `

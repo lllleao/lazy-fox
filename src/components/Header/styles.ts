@@ -3,12 +3,14 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
     position: fixed;
     width: 100%;
+    .container {
+        width: 90%;
+    }
 `
 export const Navbar = styled.div`
     display: flex;
     align-items: center;
     padding: 1.5rem 0;
-    width: 90%;
 
     .logo-header {
         width: 150px;
@@ -23,6 +25,7 @@ export const Navbar = styled.div`
             gap: 5rem;
             font-size: 1.3rem;
             font-family: var(--font-primary);
+            text-transform: uppercase;
 
             li {
                 cursor: pointer;
@@ -39,6 +42,7 @@ export const Navbar = styled.div`
         border-radius: 0.5rem;
         transition: background-color 0.3s;
         margin-left: auto;
+        text-transform: uppercase;
 
         &:hover {
             background-color: #d9762a;
