@@ -27,5 +27,14 @@ const Global = createGlobalStyle`
             transform: translateY(0) rotate(14deg);
         }
     }
+    @keyframes floatRocket {
+        0% {
+            transform: translateY(0);
+        } 50% {
+            transform: translateY(-20px);
+        } 100% {
+            transform: translateY(0);
+        }
+    }
 `
 export default Global

@@ -36,6 +36,7 @@ export const ShowHome = styled.div`
         left: 41%;
         width: 298px;
         z-index: -1;
+        animation: floatRocket 2s ease-in-out infinite;
     }
 `
 export const CellHome = styled.div`
@@ -49,12 +50,13 @@ export const CellHome = styled.div`
 
     .post {
         position: absolute;
-        top: 48px;
+        top: 10px;
         left: 10px;
         width: 179px;
-        height: 347px;
+        height: 387px;
         z-index: -1;
         border-radius: 1rem;
         object-fit: cover;
+        border-radius: 1rem;
     }
 `

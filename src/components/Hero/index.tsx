@@ -1,7 +1,7 @@
 import { CellHome, HeroSection, ShowHome } from './styles'
 import logo from '../../assets/imgs/logo.svg'
 import cell from '../../assets/imgs/iphone-png.png'
-import brisanet from '../../assets/videos/brisenet.mp4'
+import motos from '../../assets/videos/motos.mp4'
 import foxWithe from '../../assets/imgs/fox-withe.svg'
 import rocktGuy from '../../assets/imgs/rocket-guy.png'
 const Hero = () => {
@@ -17,7 +17,7 @@ const Hero = () => {
                         className="post"
                         autoPlay={true}
                         muted
-                        src={brisanet}
+                        src={motos}
                     ></video>
                 </CellHome>
             </ShowHome>
