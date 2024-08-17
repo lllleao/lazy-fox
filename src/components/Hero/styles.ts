@@ -48,6 +48,7 @@ export const CellHome = styled.div`
     height: 104%;
     overflow: hidden;
     border-radius: 2.2rem;
+    box-shadow: 2px 2px 15px #000;
     .cell {
         position: absolute;
         inset: 0;
