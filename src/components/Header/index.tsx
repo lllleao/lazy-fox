@@ -1,4 +1,4 @@
-import logo from '../../assets/logo-header.svg'
+import logo from '../../assets/imgs/logo-header.svg'
 import { HeaderContainer, Navbar } from './styles'
 const Header = () => {
     return (

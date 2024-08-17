@@ -6,9 +6,9 @@ export const HeaderContainer = styled.header`
 `
 export const Navbar = styled.div`
     display: flex;
-    /* justify-content: space-between; */
+    align-items: center;
     padding: 1.5rem 0;
-    width: 98%;
+    width: 90%;
 
     .logo-header {
         width: 150px;
@@ -19,6 +19,7 @@ export const Navbar = styled.div`
         ul {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 5rem;
             font-size: 1.3rem;
             font-family: var(--font-primary);

@@ -17,5 +17,15 @@ const Global = createGlobalStyle`
         width: 100%;
         margin: 0 auto;
     }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(14deg);
+        } 50% {
+            transform: translateY(-20px) rotate(14deg);
+        } 100% {
+            transform: translateY(0) rotate(14deg);
+        }
+    }
 `
 export default Global
