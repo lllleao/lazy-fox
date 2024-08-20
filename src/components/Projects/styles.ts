@@ -3,6 +3,58 @@ import styled from 'styled-components'
 export const ProjectsContainer = styled.div`
     background-color: #222;
     padding: 4rem 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            position: relative;
+
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 5px 1px #000;
+            overflow: hidden;
+
+            .up {
+                display: flex;
+                align-items: center;
+                transform: translateY(0);
+                background-color: #e27f34;
+                padding: 0.5rem 1rem;
+            }
+
+            svg {
+                margin-left: 0.5rem;
+            }
+
+            .down {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #5203b8;
+                transform: translateY(100%);
+            }
+
+            &:hover .up {
+                transform: translateY(-100%);
+            }
+
+            &:hover .down {
+                transform: translateY(0);
+            }
+
+            .up,
+            .down {
+                transition: transform 0.3s;
+            }
+        }
+    }
 `
 export const Card = styled.div`
     background-color: #222;
