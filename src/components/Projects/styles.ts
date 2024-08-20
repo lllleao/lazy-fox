@@ -11,6 +11,12 @@ export const Card = styled.div`
     border-radius: 1rem;
     border: 2px solid #fff;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.04);
+    }
 `
 export const SubTitle = styled.h3`
     font-family: var(--font-primary);

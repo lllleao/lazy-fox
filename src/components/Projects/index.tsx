@@ -1,9 +1,9 @@
-import acaiStory from '../../assets/imgs/acai.png'
-import acaiFeed from '../../assets/imgs/acaifeed.png'
-import motoFeed from '../../assets/imgs/motoFeed.png'
-import carroStory from '../../assets/imgs/carrosStory.png'
-import blueFeed from '../../assets/imgs/bluefeed.png'
-import blueStory from '../../assets/imgs/blueStory.png'
+import fgtsStory from '../../assets/imgs/fgtsStory.png'
+import fgtsFeed from '../../assets/imgs/fgtsFeed.png'
+import carroStory from '../../assets/imgs/carroStory.png'
+import carroFeed from '../../assets/imgs/carrosFeed.png'
+import sapatoFeed from '../../assets/imgs/sapatoFeed.png'
+import sapatoStory from '../../assets/imgs/sapatoStory.png'
 import paisFedd from '../../assets/imgs/paisFeed.jpeg'
 import paisStory from '../../assets/imgs/paisStory.jpeg'
 import {
@@ -21,20 +21,20 @@ const Projects = () => {
             <CardsContainer>
                 <Card>
                     <SliderProjects>
-                        <img alt="" srcSet={acaiStory} />
-                        <img alt="" srcSet={acaiFeed} />
+                        <img alt="" srcSet={fgtsStory} />
+                        <img alt="" srcSet={fgtsFeed} />
                     </SliderProjects>
                 </Card>
                 <Card>
                     <SliderProjects>
                         <img alt="" srcSet={carroStory} />
-                        <img alt="" srcSet={motoFeed} />
+                        <img alt="" srcSet={carroFeed} />
                     </SliderProjects>
                 </Card>
                 <Card>
                     <SliderProjects>
-                        <img alt="" srcSet={blueStory} />
-                        <img alt="" srcSet={blueFeed} />
+                        <img alt="" srcSet={sapatoStory} />
+                        <img alt="" srcSet={sapatoFeed} />
                     </SliderProjects>
                 </Card>
                 <Card>
