@@ -5,8 +5,20 @@ import { SliderContainer } from './styles'
 const Slider = () => {
     return (
         <SliderContainer>
-            <video className="post" autoPlay={true} muted src={motos}></video>
-            <video className="post" autoPlay={true} muted src={carros}></video>
+            <video
+                className="post"
+                autoPlay={true}
+                muted
+                src={motos}
+                loop
+            ></video>
+            <video
+                className="post"
+                autoPlay={true}
+                muted
+                src={carros}
+                loop
+            ></video>
         </SliderContainer>
     )
 }

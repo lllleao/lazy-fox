@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
     position: fixed;
     width: 100%;
+    z-index: 2;
     .container {
         width: 90%;
     }
@@ -22,8 +23,8 @@ export const Navbar = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5rem;
-            font-size: 1.3rem;
+            gap: 6rem;
+            font-size: 1rem;
             font-family: var(--font-primary);
             text-transform: uppercase;
 
