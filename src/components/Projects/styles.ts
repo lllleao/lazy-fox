@@ -15,15 +15,16 @@ export const ProjectsContainer = styled.div`
             font-size: 1.2rem;
             border: none;
             cursor: pointer;
-            border-radius: 0.5rem;
+            border-radius: 1rem;
             box-shadow: 0px 4px 5px 1px #000;
             overflow: hidden;
+            border: 1px solid #fff;
 
             .up {
                 display: flex;
                 align-items: center;
                 transform: translateY(0);
-                background-color: #e27f34;
+                background-color: #137f1b;
                 padding: 0.5rem 1rem;
             }
 
@@ -37,7 +38,7 @@ export const ProjectsContainer = styled.div`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #5203b8;
+                background-color: #b80303;
                 transform: translateY(100%);
             }
 
@@ -56,20 +57,7 @@ export const ProjectsContainer = styled.div`
         }
     }
 `
-export const Card = styled.div`
-    background-color: #222;
-    box-shadow: -3px 5px 9px 2px #000;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid #fff;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s;
 
-    &:hover {
-        transform: scale(1.04);
-    }
-`
 export const SubTitle = styled.h3`
     font-family: var(--font-primary);
     text-align: center;
@@ -77,15 +65,6 @@ export const SubTitle = styled.h3`
     font-size: 1.5rem;
 `
 
-export const SliderProjects = styled.div`
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    img {
-        height: 250px;
-        border-radius: 1rem;
-    }
-`
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, max-content));

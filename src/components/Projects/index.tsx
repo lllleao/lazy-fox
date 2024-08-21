@@ -1,48 +1,20 @@
-import fgtsStory from '../../assets/imgs/fgtsStory.png'
-import fgtsFeed from '../../assets/imgs/fgtsFeed.png'
-import carroStory from '../../assets/imgs/carroStory.png'
-import carroFeed from '../../assets/imgs/carrosFeed.png'
-import sapatoFeed from '../../assets/imgs/sapatoFeed.png'
-import sapatoStory from '../../assets/imgs/sapatoStory.png'
-import paisFedd from '../../assets/imgs/paisFeed.jpeg'
-import paisStory from '../../assets/imgs/paisStory.jpeg'
-import {
-    Card,
-    CardsContainer,
-    ProjectsContainer,
-    SliderProjects,
-    SubTitle
-} from './styles'
+import { CardsContainer, ProjectsContainer, SubTitle } from './styles'
+import Card from '../Card'
 
-const Projects = () => {
+type Props = {
+    title: string
+    content: string[][]
+    id: number
+}
+
+const Projects = ({ content, title, id }: Props) => {
     return (
         <ProjectsContainer>
-            <SubTitle>CRIATIVOS ESTÁTICOS</SubTitle>
+            <SubTitle>{title}</SubTitle>
             <CardsContainer>
-                <Card>
-                    <SliderProjects>
-                        <img alt="" srcSet={fgtsStory} />
-                        <img alt="" srcSet={fgtsFeed} />
-                    </SliderProjects>
-                </Card>
-                <Card>
-                    <SliderProjects>
-                        <img alt="" srcSet={carroStory} />
-                        <img alt="" srcSet={carroFeed} />
-                    </SliderProjects>
-                </Card>
-                <Card>
-                    <SliderProjects>
-                        <img alt="" srcSet={sapatoStory} />
-                        <img alt="" srcSet={sapatoFeed} />
-                    </SliderProjects>
-                </Card>
-                <Card>
-                    <SliderProjects>
-                        <img alt="" srcSet={paisStory} />
-                        <img alt="" srcSet={paisFedd} />
-                    </SliderProjects>
-                </Card>
+                {content.map((card) => (
+                    <Card key={id} content={card} id={id} />
+                ))}
             </CardsContainer>
             <div className="container">
                 <button>
