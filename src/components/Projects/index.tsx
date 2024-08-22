@@ -5,15 +5,16 @@ type Props = {
     title: string
     content: string[][]
     id: number
+    type?: boolean
 }
 
-const Projects = ({ content, title, id }: Props) => {
+const Projects = ({ content, title, id, type }: Props) => {
     return (
-        <ProjectsContainer>
+        <ProjectsContainer $type={type}>
             <SubTitle>{title}</SubTitle>
-            <CardsContainer>
+            <CardsContainer $type={type}>
                 {content.map((card) => (
-                    <Card key={id} content={card} id={id} />
+                    <Card img={type} key={id} content={card} id={id} />
                 ))}
             </CardsContainer>
             <div className="container">

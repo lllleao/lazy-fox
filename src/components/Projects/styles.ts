@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-export const ProjectsContainer = styled.div`
-    background-color: #222;
+type Props = {
+    $type?: boolean
+}
+
+export const ProjectsContainer = styled.div<Props>`
+    background-color: ${({ $type }) => ($type ? '#222' : '#000')};
     padding: 4rem 0;
 
     .container {
@@ -65,9 +69,12 @@ export const SubTitle = styled.h3`
     font-size: 1.5rem;
 `
 
-export const CardsContainer = styled.div`
+export const CardsContainer = styled.div<Props>`
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, max-content));
+    grid-template-columns: ${({ $type }) =>
+        $type
+            ? 'repeat(2, minmax(200px, max-content))'
+            : 'minmax(200px, max-content)'};
     gap: 2rem;
     justify-content: center;
 `
