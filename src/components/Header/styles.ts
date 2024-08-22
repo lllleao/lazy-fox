@@ -19,17 +19,20 @@ export const Navbar = styled.div`
     }
 
     .menu {
+        background-color: #c66922;
+        padding: 1rem 1.9rem;
+        border-radius: 1rem;
         ul {
             display: flex;
-            align-items: center;
-            justify-content: center;
             gap: 6rem;
-            font-size: 1rem;
-            font-family: var(--font-primary);
-            text-transform: uppercase;
 
             li {
-                cursor: pointer;
+                a {
+                    font-size: 1rem;
+                    font-family: var(--font-primary);
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             }
         }
     }

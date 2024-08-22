@@ -31,7 +31,7 @@ const animetedCriative = [
 ]
 const Plans = () => {
     return (
-        <PlansContainer>
+        <PlansContainer id="plans">
             <Title>CONHEÇA NOSSOS SERVIÇOS</Title>
             <Projects
                 id={1}

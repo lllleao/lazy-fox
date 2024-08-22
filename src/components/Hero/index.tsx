@@ -7,7 +7,7 @@ import Slider from '../Slider'
 
 const Hero = () => {
     return (
-        <HeroSection className="container">
+        <HeroSection id="home" className="container">
             <img className="logo" srcSet={logo} alt="" />
             <ShowHome>
                 <img className="fox" srcSet={foxWithe} alt="" />

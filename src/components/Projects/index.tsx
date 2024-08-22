@@ -1,5 +1,5 @@
 import { CardsContainer, ProjectsContainer, SubTitle } from './styles'
-import Card from '../Card'
+import Card from '../Card/Card'
 
 type Props = {
     title: string

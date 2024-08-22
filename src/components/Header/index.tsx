@@ -7,12 +7,17 @@ const Header = () => {
                 <img className="logo-header" srcSet={logo} alt="" />
                 <nav className="menu">
                     <ul>
-                        <li>Home</li>
-                        <li>Planos</li>
-                        <li>Portifólio</li>
+                        <li>
+                            <a href="#home">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#plans">SERVIÇOS</a>
+                        </li>
+                        <li>
+                            <a href="#contact">FALE CONOSCO</a>
+                        </li>
                     </ul>
                 </nav>
-                <button className="button-nav">Contate-nos</button>
             </Navbar>
         </HeaderContainer>
     )
