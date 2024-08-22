@@ -4,17 +4,16 @@ import Card from '../Card/Card'
 type Props = {
     title: string
     content: string[][]
-    id: number
     type?: boolean
 }
 
-const Projects = ({ content, title, id, type }: Props) => {
+const Projects = ({ content, title, type }: Props) => {
     return (
         <ProjectsContainer $type={type}>
             <SubTitle>{title}</SubTitle>
             <CardsContainer $type={type}>
                 {content.map((card) => (
-                    <Card img={type} key={id} content={card} id={id} />
+                    <Card img={type} key={card[0]} content={card} />
                 ))}
             </CardsContainer>
             <div className="container">

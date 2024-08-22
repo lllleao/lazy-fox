@@ -34,16 +34,11 @@ const Plans = () => {
         <PlansContainer id="plans">
             <Title>CONHEÇA NOSSOS SERVIÇOS</Title>
             <Projects
-                id={1}
                 content={staticCriative}
                 title={'CRIATIVOS ESTÁTICOS'}
                 type
             />
-            <Projects
-                id={2}
-                content={animetedCriative}
-                title={'CRIATIVOS ANIMADOS'}
-            />
+            <Projects content={animetedCriative} title={'CRIATIVOS ANIMADOS'} />
         </PlansContainer>
     )
 }

@@ -19,7 +19,7 @@ export const Navbar = styled.div`
     }
 
     .menu {
-        background-color: #c66922;
+        background-color: #c66922; //#c66922
         padding: 1rem 1.9rem;
         border-radius: 1rem;
         ul {
@@ -28,10 +28,26 @@ export const Navbar = styled.div`
 
             li {
                 a {
+                    position: relative;
                     font-size: 1rem;
                     font-family: var(--font-primary);
                     text-decoration: none;
                     cursor: pointer;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background-color: #fff;
+                        width: 0;
+                        height: 2px;
+                        bottom: -4px;
+                        left: 0;
+                        transition: width 0.5s;
+                    }
+
+                    &.is-active::after {
+                        width: 100%;
+                    }
                 }
             }
         }

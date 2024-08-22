@@ -2,15 +2,14 @@ import { CardContainer } from './styles'
 
 type Props = {
     content: string[]
-    id: number
     img?: boolean
 }
 
-const Card = ({ content, id, img }: Props) => {
+const Card = ({ content, img }: Props) => {
     return (
         <CardContainer $back={img}>
             {content.map((item) => (
-                <span key={id}>
+                <span key={item}>
                     {img ? (
                         <img srcSet={item} alt="" />
                     ) : (
