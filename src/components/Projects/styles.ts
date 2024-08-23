@@ -2,19 +2,16 @@ import styled from 'styled-components'
 
 interface Props {
     $type?: boolean
-    $heightUp?: boolean
+    $heightUp?: string
 }
 
 export const ProjectsContainer = styled.div<Props>`
     background-color: ${({ $type }) => ($type ? '#222' : '#000')};
     padding: 2rem 0;
     display: grid;
-    max-height: 90px;
-    transition: max-height 1s;
+    height: ${({ $heightUp }) => $heightUp};
+    transition: height 1s;
     overflow: clip;
-    &.is-open {
-        max-height: 900px;
-    }
 
     .container {
         display: flex;
