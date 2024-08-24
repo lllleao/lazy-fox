@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import stars from '../../assets/BG.png'
+import stars from '../../assets/BG2.png'
 
 export const MainContainer = styled.main`
     background: url(${stars}) no-repeat;
