@@ -32,7 +32,7 @@ const animetedCriative = [
 const Plans = () => {
     return (
         <PlansContainer id="plans">
-            <Title>CONHEÇA NOSSOS SERVIÇOS</Title>
+            <Title>ESCOLHA SEUS SERVIÇOS!</Title>
             <Projects
                 content={staticCriative}
                 title={'CRIATIVOS ESTÁTICOS'}
