@@ -26,7 +26,7 @@ const Hero = () => {
                     } else {
                         clearInterval(intervelId)
                     }
-                }, 50)
+                }, 20)
             }
         }, 2000)
     }, [])

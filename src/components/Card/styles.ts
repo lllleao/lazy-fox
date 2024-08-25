@@ -9,16 +9,18 @@ export const CardContainer = styled.div<Props>`
     gap: 1rem;
     justify-content: center;
     img {
-        height: 250px;
+        height: 100%;
+        width: 100%;
         border-radius: 1rem;
     }
 
     video {
-        height: 322px;
+        height: 100%;
+        width: 100%;
         border-radius: 1rem;
     }
-
-    background-color: ${({ $back }) => ($back ? '#222' : '#000')};
+    height: ${({ $back }) => ($back ? '200px' : '306px')};
+    background-color: transparent;
     box-shadow: -3px 5px 9px 2px #000;
     padding: 1rem;
     border-radius: 1rem;

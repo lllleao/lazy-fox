@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import LemonLight from './assets/fonts/lemonLight.otf'
 import LemonBold from './assets/fonts/LEMONMILK-Bold.otf'
+import stars from './assets/BG2.png'
 
 const Global = createGlobalStyle`
     :root {
@@ -28,6 +29,11 @@ const Global = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
+    }
+
+    body {
+        background: url(${stars}) no-repeat;
+        background-size: cover;
     }
 
     .container {
