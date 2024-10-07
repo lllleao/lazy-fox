@@ -26,19 +26,24 @@ const sliderCards = (
     }
 
     const handleInterval = () => {
-        const currentSize = cardSize + restartValue
-        count++
-        count = count === cards.length ? 1 : count
-        cards.forEach((item) => {
-            const element = item as HTMLElement
-            element.style.transition = 'transform 0.3s'
-            element.style.transform = isAnimeted
-                ? `translateY(${-currentSize}px)`
-                : `translateX(${-currentSize}px)`
+        setTimeout(() => {
+            const currentSize = cardSize + restartValue
+            count++
+            count = count === cards.length ? 1 : count
+            cards.forEach((item) => {
+                const element = item as HTMLElement
+                element.style.transition = 'transform 0.3s'
+                element.style.transform = isAnimeted
+                    ? `translateY(${-currentSize}px)`
+                    : `translateX(${-currentSize}px)`
 
-            item.addEventListener('transitionend', handleTransitionEnd(element))
-        })
-        restartValue = count === cards.length - 1 ? 0 : currentSize
+                item.addEventListener(
+                    'transitionend',
+                    handleTransitionEnd(element)
+                )
+            })
+            restartValue = count === cards.length - 1 ? 0 : currentSize
+        }, 3000)
     }
 
     setInterval(handleInterval, timeInterval)
