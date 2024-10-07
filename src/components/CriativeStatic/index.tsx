@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { CardsStaticContainer } from './styles'
 import Card from '../Card'
 // imgs
@@ -14,11 +14,19 @@ const CriativeStatic = () => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
 
-    useEffect(() => {
-        sliderCards(cardContainerRef, hasMounted, 'card-static', false, 3000)
-    }, [])
     return (
-        <CardsStaticContainer ref={cardContainerRef}>
+        <CardsStaticContainer
+            onLoad={() =>
+                sliderCards(
+                    cardContainerRef,
+                    hasMounted,
+                    'card-static',
+                    false,
+                    3000
+                )
+            }
+            ref={cardContainerRef}
+        >
             {staticCriative.map((card) => (
                 <Card img={true} key={card} content={card} />
             ))}

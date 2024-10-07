@@ -9,7 +9,6 @@ export const CardContainer = styled.div<Props>`
     padding: 1rem;
     border-radius: 1rem;
     border: 2px solid #fff;
-    cursor: pointer;
     transition: transform 0.3s;
     img {
         height: 100%;

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import Card from '../Card'
 import { CardsAnimated } from './styles'
 
@@ -16,12 +16,19 @@ const CriativeAnimated = () => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
 
-    useEffect(() => {
-        sliderCards(cardContainerRef, hasMounted, 'card-anime', true, 4000)
-    }, [])
-
     return (
-        <CardsAnimated ref={cardContainerRef}>
+        <CardsAnimated
+            onLoadStart={() =>
+                sliderCards(
+                    cardContainerRef,
+                    hasMounted,
+                    'card-anime',
+                    true,
+                    4000
+                )
+            }
+            ref={cardContainerRef}
+        >
             {animetedCriative.map((card) => (
                 <Card img={false} key={card} content={card} />
             ))}
