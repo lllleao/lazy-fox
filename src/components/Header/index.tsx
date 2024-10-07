@@ -56,7 +56,7 @@ const Header = () => {
                                 className={isActive.contact ? 'is-active' : ''}
                                 href="#contact"
                             >
-                                FALE CONOSCO
+                                <i className="fa-solid fa-cart-shopping" />
                             </a>
                         </li>
                     </ul>

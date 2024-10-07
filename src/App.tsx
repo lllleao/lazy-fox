@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './containers/Footer'
 import Main from './containers/Main'
 import Global from './global'
 
@@ -8,6 +9,7 @@ function App() {
             <Global />
             <Header />
             <Main />
+            <Footer />
         </>
     )
 }

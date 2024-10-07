@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const HeroSection = styled.section`
-    padding-top: 2rem;
+    width: 90%;
+    padding: 12rem 0;
     display: flex;
     gap: 3rem;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 
     .rocket {
         max-width: clamp(256px, 40vw, 683px);

@@ -1,6 +1,6 @@
 import Hero from '../../components/Hero'
 import Plans from '../../components/Plans'
-import Footer from '../Footer'
+import SitesProject from '../../components/SitesProject'
 import { MainContainer, Overlay } from './styles'
 
 const Main = () => {
@@ -10,7 +10,7 @@ const Main = () => {
                 <Overlay />
                 <Hero />
                 <Plans />
-                <Footer />
+                <SitesProject />
             </MainContainer>
         </>
     )

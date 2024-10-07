@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     z-index: 2;
     .container {
@@ -20,7 +20,7 @@ export const Navbar = styled.div`
 
     .menu {
         background-color: #ff7f00; //#c66922
-        padding: 1rem 1.9rem;
+        padding: 0.9rem 1.3rem;
         border-radius: 1rem;
         ul {
             display: flex;
@@ -30,7 +30,7 @@ export const Navbar = styled.div`
                 transition: transform 0.3s;
                 a {
                     position: relative;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     font-family: var(--font-primary);
                     font-weight: bold;
                     text-decoration: none;
@@ -46,6 +46,10 @@ export const Navbar = styled.div`
                         bottom: 0;
                         left: 0;
                         transition: width 0.5s;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
                     }
 
                     &.is-active::after {
