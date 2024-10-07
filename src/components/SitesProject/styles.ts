@@ -1,7 +1,17 @@
 import styled from 'styled-components'
+import { Button } from '../../global'
 
 export const SitesSection = styled.section`
     padding-top: 3rem;
+
+    ${Button} {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        button {
+            width: 300px;
+        }
+    }
 `
 
 export const TitleSites = styled.h3`

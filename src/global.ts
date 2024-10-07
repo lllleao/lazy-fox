@@ -127,7 +127,6 @@ export const SubTitleCriatives = styled.h3<{ $type?: boolean }>`
 
 export const Button = styled.div`
     display: inline-block;
-    justify-content: center;
 
     button {
         position: relative;
