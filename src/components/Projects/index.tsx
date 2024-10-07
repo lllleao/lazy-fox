@@ -1,59 +1,21 @@
-import {
-    Button,
-    CardsContainer,
-    ProductInfo,
-    ProjectsContainer,
-    SubTitle
-} from './styles'
-import Card from '../Card/Card'
+import { Button, ProductInfo, ProjectsContainer, SubTitle } from './styles'
 import arrow from '../../assets/arrow.svg'
-import { useEffect, useRef, useState } from 'react'
 
 type Props = {
     title: string
-    content: string[][]
     type?: boolean
+    children: JSX.Element
 }
 
-const Projects = ({ content, title, type }: Props) => {
-    const [heightUp, setHeightUp] = useState(false)
-    const [newHeight, setNewHeight] = useState('90px')
-    const containerRer = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        const updateHeight = () => {
-            if (containerRer.current) {
-                setNewHeight(
-                    heightUp
-                        ? `${containerRer.current.scrollHeight + 32}px`
-                        : '50px'
-                )
-            }
-        }
-
-        updateHeight()
-    }, [heightUp])
-
-    const handleHeight = () => {
-        setHeightUp(!heightUp)
-    }
-
+const Projects = ({ title, type, children }: Props) => {
     return (
-        <ProjectsContainer
-            $heightUp={newHeight}
-            ref={containerRer}
-            className="container"
-        >
-            <SubTitle $type={type} onClick={handleHeight}>
+        <ProjectsContainer className="container">
+            <SubTitle $type={type}>
                 {title} <img srcSet={arrow} alt="" />{' '}
             </SubTitle>
-            <div className="product-description">
-                <CardsContainer $type={type}>
-                    {content.map((card) => (
-                        <Card img={type} key={card[0]} content={card} />
-                    ))}
-                </CardsContainer>
-                <ProductInfo className="product-info">
+            <div className="product-info">
+                {children}
+                <ProductInfo>
                     <div className="price">
                         <span>R$ 29,99</span>
                         <p>
@@ -66,7 +28,7 @@ const Projects = ({ content, title, type }: Props) => {
                     <Button className="button">
                         <button>
                             <span className="up">
-                                Encomende o seu já{' '}
+                                Encomende o seu já
                                 <svg
                                     viewBox="0 0 24 24"
                                     width="20"

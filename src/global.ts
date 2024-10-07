@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import LemonLight from './assets/fonts/lemonLight.otf'
 import LemonBold from './assets/fonts/LEMONMILK-Bold.otf'
-import stars from './assets/BG2.png'
+import stars from './assets/BG2.svg'
 
 const Global = createGlobalStyle`
     :root {

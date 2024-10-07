@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
-interface Props {
-    $heightUp?: string
-}
-
-export const ProjectsContainer = styled.div<Props>`
-    height: ${({ $heightUp }) => $heightUp};
-    transition: height 1s;
-    overflow: clip;
+export const ProjectsContainer = styled.div`
     margin-bottom: 1rem;
 
     &.container {
@@ -15,8 +8,10 @@ export const ProjectsContainer = styled.div<Props>`
         margin-bottom: 1.5rem;
     }
 
-    .product-description {
+    .product-info {
         display: flex;
+        gap: 2rem;
+        justify-content: center;
     }
 `
 
@@ -36,16 +31,6 @@ export const SubTitle = styled.h3<{ $type?: boolean }>`
     }
 `
 
-export const CardsContainer = styled.div<{ $type?: boolean }>`
-    display: grid;
-    grid-template-columns: ${({ $type }) =>
-        $type
-            ? 'repeat(2, minmax(200px, max-content))'
-            : 'minmax(200px, max-content)'};
-    gap: 2rem;
-    justify-content: center;
-    margin-left: 1rem;
-`
 export const Button = styled.div`
     display: inline-block;
     justify-content: center;
@@ -59,7 +44,7 @@ export const Button = styled.div`
         border-radius: 1rem;
         box-shadow: 0px 4px 5px 1px #000;
         overflow: hidden;
-        border: 1px solid #fff;
+        border: 2px solid #fff;
 
         .up {
             display: flex;
@@ -99,10 +84,6 @@ export const Button = styled.div`
 `
 export const ProductInfo = styled.div`
     width: 40%;
-    margin-left: 2rem;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     .price {
         font-family: var(--font-primary);
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PlansContainer = styled.section`
-    padding-top: 8rem;
+    /* padding: 8rem 0; */
     max-height: 100%;
     height: 1529px;
 `

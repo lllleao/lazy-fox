@@ -9,8 +9,6 @@ const Hero = () => {
     const text =
         'Naa Lazy Fox Design, transformamos suas ideias em criações impactantes. De criativos animados a estratégias de marketing digital, temos as ferramentas certas para destacar sua marca no mercado. Vamos juntos impulsionar o seu sucesso online!'
 
-    console.log(text.length)
-
     useEffect(() => {
         setTimeout(() => {
             if (!hasMounted.current) {
@@ -19,7 +17,6 @@ const Hero = () => {
 
                 const intervelId = setInterval(() => {
                     if (index + 1 < text.length) {
-                        console.log(index)
 
                         setLetters((prev) => prev + text[index])
                         index++

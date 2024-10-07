@@ -9,7 +9,6 @@ export const HeroSection = styled.section`
 
     .rocket {
         max-width: clamp(256px, 40vw, 683px);
-        /* width: 100%; */
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
