@@ -1,5 +1,4 @@
 import { Button, ProductInfo, ProjectsContainer, SubTitle } from './styles'
-import arrow from '../../assets/arrow.svg'
 
 type Props = {
     title: string
@@ -10,9 +9,7 @@ type Props = {
 const Projects = ({ title, type, children }: Props) => {
     return (
         <ProjectsContainer className="container">
-            <SubTitle $type={type}>
-                {title} <img srcSet={arrow} alt="" />{' '}
-            </SubTitle>
+            <SubTitle $type={type}>{title}</SubTitle>
             <div className="product-info">
                 {children}
                 <ProductInfo>
