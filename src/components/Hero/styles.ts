@@ -6,6 +6,7 @@ export const HeroSection = styled.section`
     display: flex;
     gap: 3rem;
     align-items: center;
+    height: 100vh;
 
     .rocket {
         max-width: clamp(256px, 40vw, 683px);
