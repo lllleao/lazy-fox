@@ -42,7 +42,7 @@ const CriativeStatic = ({ title, type }: Props) => {
     }
 
     return (
-        <ProjectsContainer className="container">
+        <ProjectsContainer id="static" className="container">
             <SubTitleCriatives className="ant-container" $type={type}>
                 {title}
             </SubTitleCriatives>

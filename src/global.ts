@@ -39,7 +39,7 @@ const Global = createGlobalStyle`
 
     .container {
         max-width: 1312px;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -111,7 +111,7 @@ export const ProjectsContainer = styled.div`
 `
 
 export const SubTitleCriatives = styled.h3<{ $type?: boolean }>`
-    background-color: ${({ $type }) => ($type ? '#d46018' : '#172b84')};
+    background-color: ${({ $type }) => ($type ? '#ff7f00' : '#172b84')};
     border-radius: 1rem;
     font-family: var(--font-primary);
     text-align: center;
@@ -200,7 +200,7 @@ export const ProductInfo = styled.div`
                 padding: 0.2rem;
                 border: none;
                 border-radius: 0.2rem;
-                background-color: #d46018;
+                background-color: #ff7f00;
 
                 option {
                     /* background-color: #fff; */

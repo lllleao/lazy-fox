@@ -17,7 +17,6 @@ const Hero = () => {
 
                 const intervelId = setInterval(() => {
                     if (index + 1 < text.length) {
-
                         setLetters((prev) => prev + text[index])
                         index++
                     } else {

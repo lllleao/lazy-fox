@@ -2,17 +2,20 @@ import styled from 'styled-components'
 
 export const HeroSection = styled.section`
     width: 90%;
-    padding: 12rem 0;
+    padding: 17rem 0;
     display: flex;
     gap: 3rem;
     align-items: center;
-    /* height: 100vh; */
 
     .rocket {
         max-width: clamp(256px, 40vw, 683px);
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
+    }
+
+    @media (max-width: 425px) {
+        flex-direction: column-reverse;
     }
 `
 
@@ -36,6 +39,6 @@ export const TextHome = styled.p`
     margin-top: 1rem;
     word-spacing: 0.3rem;
     line-height: 1.8rem;
-    width: 581px;
-    height: 123px;
+    /* max-width: 581px;
+    height: 144px; */
 `

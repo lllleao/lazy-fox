@@ -11,7 +11,7 @@ import { Button } from '../../global'
 
 const SitesProject = () => {
     return (
-        <S.SitesSection className="container">
+        <S.SitesSection id="sites" className="container">
             <S.TitleSites>Eleve sua marca com um site só seu</S.TitleSites>
             <S.CardsSitesContainer className="sites">
                 <SiteCard

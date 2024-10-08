@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '../../assets/imgs/logo-header.svg'
-import { HeaderContainer, Navbar } from './styles'
+import { HeaderContainer, Navbar, SubMenu } from './styles'
 const Header = () => {
     const [isActive, setIsActive] = useState({
         home: true,
@@ -31,29 +31,44 @@ const Header = () => {
             <Navbar className="container">
                 <img className="logo-header" srcSet={logo} alt="" />
                 <nav className="menu">
-                    <ul>
-                        <li>
+                    <ul className="menu__list">
+                        <li className="menu__list__item">
                             <a
                                 onClick={() => handleActive('home')}
-                                className={isActive.home ? 'is-active' : ''}
+                                className={`${isActive.home ? 'is-active' : ''} menu__list__item__link`}
                                 href="#home"
                             >
                                 HOME
                             </a>
                         </li>
-                        <li>
+                        <li className="menu__list__item">
                             <a
                                 onClick={() => handleActive('plans')}
-                                className={isActive.plans ? 'is-active' : ''}
+                                className={`${isActive.plans ? 'is-active' : ''} service menu__list__item__link`}
                                 href="#plans"
                             >
-                                SERVIÇOS{' '}
+                                SERVIÇOS
+                                <SubMenu>
+                                    <li>
+                                        <a href="#static">
+                                            Criativos Estáticos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#animated">
+                                            Criativos Animados
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#sites">Sites</a>
+                                    </li>
+                                </SubMenu>
                             </a>
                         </li>
-                        <li>
+                        <li className="menu__list__item">
                             <a
                                 onClick={() => handleActive('contact')}
-                                className={isActive.contact ? 'is-active' : ''}
+                                className={`${isActive.contact ? 'is-active' : ''} menu__list__item__link`}
                                 href="#contact"
                             >
                                 <i className="fa-solid fa-cart-shopping" />

@@ -30,14 +30,14 @@ const CriativeAnimated = ({ title, type }: Props) => {
     const [price, setPrice] = useState('34.99')
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const prices = ['34.99', '62.99', '67.49', '139.99', '244.49']
+        const prices = ['34.99', '62.99', '139.99', '244.49']
         const index = Number(event.target.value)
         setPrice(prices[index])
     }
 
     return (
         <>
-            <ProjectsContainer className="container">
+            <ProjectsContainer id="animated" className="container">
                 <SubTitleCriatives className="ant-container" $type={type}>
                     {title}
                 </SubTitleCriatives>

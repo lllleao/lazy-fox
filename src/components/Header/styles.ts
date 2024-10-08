@@ -1,13 +1,33 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-    /* position: fixed; */
+    position: absolute;
     width: 100%;
     z-index: 2;
     .container {
         width: 90%;
     }
 `
+
+export const SubMenu = styled.ul`
+    position: absolute;
+    top: 2.5rem;
+    left: -3rem;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+    li {
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            background-color: #ff7f00;
+            width: 180px;
+            font-size: 1rem;
+        }
+    }
+`
+
 export const Navbar = styled.div`
     display: flex;
     align-items: center;
@@ -22,13 +42,13 @@ export const Navbar = styled.div`
         background-color: #ff7f00; //#c66922
         padding: 0.9rem 1.3rem;
         border-radius: 1rem;
-        ul {
+        &__list {
             display: flex;
             gap: 6rem;
 
-            li {
+            &__item {
                 transition: transform 0.3s;
-                a {
+                &__link {
                     position: relative;
                     font-size: 0.9rem;
                     font-family: var(--font-primary);
@@ -56,10 +76,25 @@ export const Navbar = styled.div`
                         width: 100%;
                     }
                 }
-                &:hover {
+                &:nth-child(1):hover {
                     transform: scale(1.1) translateY(-2px);
                 }
+
+                &:nth-child(3):hover {
+                    transform: scale(1.1) translateY(-2px);
+                }
+
+                &:nth-child(2):hover ${SubMenu} {
+                    height: 105px;
+                }
+
+                .service {
+                    position: relative;
+                }
             }
+        }
+        @media (max-width: 425px) {
+            display: none;
         }
     }
 
