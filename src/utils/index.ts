@@ -35,6 +35,10 @@ const sliderCards = (
             element.style.transform = isAnimeted
                 ? `translateY(${-currentSize}px)`
                 : `translateX(${-currentSize}px)`
+            element.style.transition = 'transform 0.3s'
+            element.style.transform = isAnimeted
+                ? `translateY(${-currentSize}px)`
+                : `translateX(${-currentSize}px)`
 
             item.addEventListener('transitionend', handleTransitionEnd(element))
         })
