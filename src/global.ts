@@ -38,10 +38,13 @@ const Global = createGlobalStyle`
 
     body {
         background: url(${starsBigger}) no-repeat;
-        /* background-color: #000; */
         background-size: cover;
         background-attachment: fixed;
-        /* background-position: right; */
+        -webkit-background-attachment: fixed;
+
+        @media (max-width: 767px) {
+            background-attachment: scroll;
+        }
     }
 
     .container {
