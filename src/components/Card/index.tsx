@@ -13,8 +13,7 @@ const Card = ({ content, img }: Props) => {
         if (videosRef.current) {
             const video = videosRef.current
 
-            video.autoplay = true
-            video.muted = true
+            video.play()
         }
     }, [])
     return (
