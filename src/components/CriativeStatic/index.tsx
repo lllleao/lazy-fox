@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CardsStaticContainer, ProjectsContainerStatic } from './styles'
 import Card from '../Card'
 // imgs
@@ -18,6 +18,18 @@ type Props = {
 const CriativeStatic = ({ title }: Props) => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            sliderCards(
+                cardContainerRef,
+                hasMounted,
+                'card-static',
+                false,
+                3000
+            )
+        }, 3000)
+    }, [])
 
     const [price, setPrice] = useState('24.99')
 
@@ -41,18 +53,7 @@ const CriativeStatic = ({ title }: Props) => {
                 {title}
             </SubTitleCriatives>
             <div className="product-info">
-                <CardsStaticContainer
-                    onLoad={() =>
-                        sliderCards(
-                            cardContainerRef,
-                            hasMounted,
-                            'card-static',
-                            false,
-                            3000
-                        )
-                    }
-                    ref={cardContainerRef}
-                >
+                <CardsStaticContainer ref={cardContainerRef}>
                     {staticCriative.map((card) => (
                         <Card img={true} key={card} content={card} />
                     ))}

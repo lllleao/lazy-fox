@@ -41,9 +41,7 @@ const sliderCards = (
         restartValue = count === cards.length - 1 ? 0 : currentSize
     }
 
-    setTimeout(() => {
-        setInterval(handleInterval, timeInterval)
-    }, 3000)
+    setInterval(handleInterval, timeInterval)
 
     return () => {
         cards.forEach((item) => {
