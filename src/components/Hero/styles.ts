@@ -34,7 +34,6 @@ export const Title = styled.h1`
     font-size: clamp(1rem, 10vw, 3rem);
     text-shadow: 3px 3px 5px #000;
     padding-top: 3rem;
-    text-align: center;
     animation: float1 1.5s ease-in;
 
     .second {
