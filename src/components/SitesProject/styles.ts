@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Button } from '../../global'
 
 export const SitesSection = styled.section`
-    padding-top: 3rem;
+    padding-top: 95.5px;
 
     ${Button} {
         margin-top: 2rem;
@@ -39,4 +39,8 @@ export const CardsSitesContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 2rem;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
 `

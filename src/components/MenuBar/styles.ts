@@ -1,17 +1,24 @@
 import styled from 'styled-components'
+import { colors } from '../../global'
 
 export const HeaderContainer = styled.header`
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 2;
+    margin-right: auto;
+    backdrop-filter: blur(10px);
     .container {
         width: 90%;
     }
+    @media (max-width: 992px) {
+        position: static;
+        backdrop-filter: blur(0);
+    }
 `
 
-export const SubMenu = styled.ul`
+export const SubMenu = styled.nav`
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     left: -3rem;
     height: 0;
     overflow: hidden;
@@ -19,11 +26,18 @@ export const SubMenu = styled.ul`
     li {
         a {
             text-decoration: none;
+            font-family: var(--font-primary);
+            font-weight: bold;
             display: block;
             padding: 0.5rem 1rem;
-            background-color: #ff7f00;
+            background-color: ${colors.mainOrange};
             width: 180px;
             font-size: 1rem;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #cf6c0a;
+            }
         }
     }
 `
@@ -36,11 +50,14 @@ export const Navbar = styled.div`
     .logo-header {
         width: 150px;
         margin-right: auto;
+        @media (max-width: 992px) {
+            margin: 0 auto;
+        }
     }
 
     .menu {
-        background-color: #ff7f00; //#c66922
-        padding: 0.9rem 1.3rem;
+        background-color: ${colors.mainOrange};
+        padding: 0.7rem 1rem;
         border-radius: 1rem;
         &__list {
             display: flex;
@@ -76,6 +93,7 @@ export const Navbar = styled.div`
                         width: 100%;
                     }
                 }
+
                 &:nth-child(1):hover {
                     transform: scale(1.1) translateY(-2px);
                 }
@@ -87,13 +105,12 @@ export const Navbar = styled.div`
                 &:nth-child(2):hover ${SubMenu} {
                     height: 105px;
                 }
-
-                .service {
-                    position: relative;
-                }
+            }
+            .service {
+                position: relative;
             }
         }
-        @media (max-width: 425px) {
+        @media (max-width: 992px) {
             display: none;
         }
     }

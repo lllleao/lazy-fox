@@ -6,7 +6,6 @@ import eplay from '../../assets/imgs/sites/eplay.png'
 import restEcommerce from '../../assets/imgs/sites/rest-commerce.png'
 import restLanding from '../../assets/imgs/sites/restLanding.png'
 
-import TagSite from '../TagSite'
 import { Button } from '../../global'
 
 const SitesProject = () => {
@@ -23,15 +22,6 @@ const SitesProject = () => {
                     site="https://cidadeclipse.com/"
                     github="https://github.com/lllleao/cd-react"
                     image={cidadeClipse}
-                    tags={
-                        <S.Tags>
-                            <TagSite>React</TagSite>
-                            <TagSite>TypeScript</TagSite>
-                            <TagSite>Styled-Components</TagSite>
-                            <TagSite>Express</TagSite>
-                            <TagSite>NoSQL</TagSite>
-                        </S.Tags>
-                    }
                 />
                 <SiteCard
                     description="Um projeto de estudos, trata-se de uma página que simula um e-commerce. Existe as abas e categorias que listam os jogos, ao clicar o usuáriuo é direcionado a página do jogo, a qual exibe fotos e vídeos do jogo. Além disso, existe a parte do checkout."
@@ -39,15 +29,6 @@ const SitesProject = () => {
                     site="https://eplay-three-virid.vercel.app/"
                     github="https://github.com/lllleao/eplay"
                     image={eplay}
-                    tags={
-                        <S.Tags>
-                            <TagSite>React</TagSite>
-                            <TagSite>TypeScript</TagSite>
-                            <TagSite>Styled-Components</TagSite>
-                            <TagSite>React Redux</TagSite>
-                            <TagSite>React Router</TagSite>
-                        </S.Tags>
-                    }
                 />
                 <SiteCard
                     description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
@@ -55,15 +36,6 @@ const SitesProject = () => {
                     site="https://efood-umber-kappa.vercel.app/"
                     github="https://github.com/lllleao/efood"
                     image={restLanding}
-                    tags={
-                        <S.Tags>
-                            <TagSite>React</TagSite>
-                            <TagSite>TypeScript</TagSite>
-                            <TagSite>Styled-Components</TagSite>
-                            <TagSite>React Redux</TagSite>
-                            <TagSite>React Router</TagSite>
-                        </S.Tags>
-                    }
                 />
                 <SiteCard
                     description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
@@ -71,15 +43,6 @@ const SitesProject = () => {
                     site="https://efood-umber-kappa.vercel.app/"
                     github="https://github.com/lllleao/efood"
                     image={restEcommerce}
-                    tags={
-                        <S.Tags>
-                            <TagSite>React</TagSite>
-                            <TagSite>TypeScript</TagSite>
-                            <TagSite>Styled-Components</TagSite>
-                            <TagSite>React Redux</TagSite>
-                            <TagSite>React Router</TagSite>
-                        </S.Tags>
-                    }
                 />
             </S.CardsSitesContainer>
             <Button className="button">

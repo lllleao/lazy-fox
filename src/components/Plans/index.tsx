@@ -6,8 +6,8 @@ const Plans = () => {
     return (
         <PlansContainer id="plans">
             <Title>ESCOLHA SEUS SERVIÇOS!</Title>
-            <CriativeStatic type={true} title="CRIATIVOS ESTÁTICOS" />
-            <CriativeAnimated type={false} title="CRIATIVOS ANIMADOS" />
+            <CriativeStatic title="CRIATIVOS ESTÁTICOS" />
+            <CriativeAnimated title="CRIATIVOS ANIMADOS" />
         </PlansContainer>
     )
 }

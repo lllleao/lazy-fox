@@ -137,7 +137,7 @@ export const ContainerFlip = styled.div`
 export const Card = styled.div<{ $isFlipped: boolean }>`
     position: relative;
     height: max-content;
-    background-image: linear-gradient(163deg, #6a218a 0%, #6139f2 100%);
+    background-image: linear-gradient(163deg, #ff7f00 0%, #e64519 100%);
     border-radius: 1.5rem;
     transition:
         transform 1s ease,
@@ -147,7 +147,7 @@ export const Card = styled.div<{ $isFlipped: boolean }>`
     transform-style: preserve-3d;
 
     &:hover {
-        box-shadow: 0px 0px 30px 1px rgb(46 0 255 / 30%);
+        box-shadow: 0px 0px 30px 1px rgb(255 127 1 / 30%);
     }
     @media (max-width: 767px) {
         margin: 0 auto 2rem;

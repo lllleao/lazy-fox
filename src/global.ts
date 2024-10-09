@@ -1,7 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import LemonLight from './assets/fonts/lemonLight.otf'
 import LemonBold from './assets/fonts/LEMONMILK-Bold.otf'
-import stars from './assets/BG2.svg'
+import starsBigger from './assets/imgs/back-novo-esp.svg'
+
+export const colors = {
+    mainOrange: '#ff7f00'
+}
 
 const Global = createGlobalStyle`
 // Fontes e variáveis
@@ -33,8 +37,10 @@ const Global = createGlobalStyle`
     }
 
     body {
-        background: url(${stars}) no-repeat;
+        background: url(${starsBigger}) no-repeat;
         background-size: cover;
+        background-attachment: fixed;
+        /* background-position: right; */
     }
 
     .container {
@@ -93,31 +99,63 @@ const Global = createGlobalStyle`
             transform: translateY(-0.1em);
         }
     }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 `
 // Criativos
 export const ProjectsContainer = styled.div`
-    margin-bottom: 1rem;
-
     &.container {
+        padding-top: 95.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 90%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 8rem;
     }
 
     .product-info {
         display: flex;
         gap: 2rem;
+        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        @media (max-width: 901px) {
+            flex-direction: column;
+        }
     }
 `
 
-export const SubTitleCriatives = styled.h3<{ $type?: boolean }>`
-    background-color: ${({ $type }) => ($type ? '#ff7f00' : '#172b84')};
-    border-radius: 1rem;
+export const SubTitleCriatives = styled.h3`
     font-family: var(--font-primary);
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 0.5rem 0;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
+    /* width: 30%; */
+    border: 2px solid #ff7f00;
+    border-image: linear-gradient(
+            144deg,
+            transparent,
+            transparent,
+            #ff7f00,
+            #ff7f00,
+            #ff7f00,
+            #ff7f00,
+            #ff7f00,
+            #ff7f00,
+            #ff7f00,
+            transparent,
+            transparent
+        )
+        1;
 
     img {
         margin-left: 1rem;
@@ -195,16 +233,16 @@ export const ProductInfo = styled.div`
             }
 
             .price-values {
-                /* color: #000; */
                 font-size: 1.5rem;
                 padding: 0.2rem;
                 border: none;
                 border-radius: 0.2rem;
-                background-color: #ff7f00;
+                background-color: ${colors.mainOrange};
+            }
 
-                option {
-                    /* background-color: #fff; */
-                }
+            @media (max-width: 402px) {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
 
@@ -214,6 +252,13 @@ export const ProductInfo = styled.div`
             line-height: 1.8rem;
             margin: 1.5rem 0;
         }
+    }
+
+    @media (max-width: 901px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
     }
 `
 export default Global

@@ -19,11 +19,10 @@ import {
 
 type Props = {
     title: string
-    type?: boolean
 }
 
 const animetedCriative = [brisaNet, carros, motos, motoCarro, motosMae, tim]
-const CriativeAnimated = ({ title, type }: Props) => {
+const CriativeAnimated = ({ title }: Props) => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
 
@@ -38,7 +37,7 @@ const CriativeAnimated = ({ title, type }: Props) => {
     return (
         <>
             <ProjectsContainer id="animated" className="container">
-                <SubTitleCriatives className="ant-container" $type={type}>
+                <SubTitleCriatives className="ant-container">
                     {title}
                 </SubTitleCriatives>
                 <div className="product-info">

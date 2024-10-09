@@ -5,11 +5,17 @@ const Footer = () => {
         <FooterContainer>
             <div className="container">
                 <ul className="options">
-                    <li>Home</li>
-                    <li>Serviços</li>
-                    <li>Carrinho</li>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#plans">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Carrinho</a>
+                    </li>
                 </ul>
-                <div>
+                <div className="copy">
                     <p>Todos os direitos resrvados - Lazy Fox &copy;</p>
                     <ul className="social-links">
                         <li>

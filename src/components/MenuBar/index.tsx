@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from '../../assets/imgs/logo-header.svg'
 import { HeaderContainer, Navbar, SubMenu } from './styles'
-const Header = () => {
+const MenuBar = () => {
     const [isActive, setIsActive] = useState({
         home: true,
         plans: false,
@@ -41,14 +41,16 @@ const Header = () => {
                                 HOME
                             </a>
                         </li>
-                        <li className="menu__list__item">
+                        <li className="menu__list__item service">
                             <a
                                 onClick={() => handleActive('plans')}
-                                className={`${isActive.plans ? 'is-active' : ''} service menu__list__item__link`}
+                                className={`${isActive.plans ? 'is-active' : ''} menu__list__item__link`}
                                 href="#plans"
                             >
                                 SERVIÇOS
-                                <SubMenu>
+                            </a>
+                            <SubMenu>
+                                <ul>
                                     <li>
                                         <a href="#static">
                                             Criativos Estáticos
@@ -62,8 +64,8 @@ const Header = () => {
                                     <li>
                                         <a href="#sites">Sites</a>
                                     </li>
-                                </SubMenu>
-                            </a>
+                                </ul>
+                            </SubMenu>
                         </li>
                         <li className="menu__list__item">
                             <a
@@ -81,4 +83,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default MenuBar

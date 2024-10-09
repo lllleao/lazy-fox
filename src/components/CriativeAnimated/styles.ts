@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { CardContainer } from '../Card/styles'
+import { ProjectsContainer } from '../../global'
 
 export const CardsAnimated = styled.div`
     height: 598px;
@@ -15,5 +16,11 @@ export const CardsAnimated = styled.div`
             width: 100%;
             border-radius: 1rem;
         }
+
+        @media (max-width: 901px) {
+            margin: 0 auto 2rem auto;
+        }
     }
 `
+
+export const ProjectsContainerAnimeted = styled(ProjectsContainer)``

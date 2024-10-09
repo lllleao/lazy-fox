@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export const PlansContainer = styled.section`
-    /* padding: 8rem 0; */
-    max-height: 100%;
-    height: 1529px;
+    padding-top: 95.5px;
 `
 export const Title = styled.h2`
     font-family: var(--font-primary);

@@ -1,5 +1,5 @@
-import Header from './components/Header'
 import Footer from './containers/Footer'
+import Header from './containers/Header'
 import Main from './containers/Main'
 import Global from './global'
 

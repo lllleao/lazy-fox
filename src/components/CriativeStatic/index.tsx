@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { CardsStaticContainer } from './styles'
+import { CardsStaticContainer, ProjectsContainerStatic } from './styles'
 import Card from '../Card'
 // imgs
 import fgtsFeed from '../../assets/imgs/fgtsFeed.png'
@@ -7,21 +7,15 @@ import carroFeed from '../../assets/imgs/carrosFeed.png'
 import sapatoFeed from '../../assets/imgs/sapatoFeed.png'
 import paisFedd from '../../assets/imgs/paisFeed.jpeg'
 import sliderCards from '../../utils'
-import {
-    Button,
-    ProductInfo,
-    ProjectsContainer,
-    SubTitleCriatives
-} from '../../global'
+import { Button, ProductInfo, SubTitleCriatives } from '../../global'
 
 const staticCriative = [fgtsFeed, carroFeed, sapatoFeed, paisFedd]
 
 type Props = {
     title: string
-    type?: boolean
 }
 
-const CriativeStatic = ({ title, type }: Props) => {
+const CriativeStatic = ({ title }: Props) => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
 
@@ -42,8 +36,8 @@ const CriativeStatic = ({ title, type }: Props) => {
     }
 
     return (
-        <ProjectsContainer id="static" className="container">
-            <SubTitleCriatives className="ant-container" $type={type}>
+        <ProjectsContainerStatic id="static" className="container">
+            <SubTitleCriatives className="ant-container">
                 {title}
             </SubTitleCriatives>
             <div className="product-info">
@@ -88,10 +82,11 @@ const CriativeStatic = ({ title, type }: Props) => {
                             </select>
                         </div>
                         <p>
-                            Dê vida ao seu produto com nossos criativos animados
-                            exclusivos! Transforme cliques em conversões com
-                            animações que capturam a atenção e destacam o valor
-                            da sua marca.
+                            Destaque o melhor da sua marca com nossos criativos
+                            estáticos exclusivos! Transforme visualizações em
+                            engajamento com designs que capturam a essência do
+                            seu produto e garantem um visual impactante para
+                            suas redes.
                         </p>
                     </div>
                     <Button className="button">
@@ -133,7 +128,7 @@ const CriativeStatic = ({ title, type }: Props) => {
                     </Button>
                 </ProductInfo>
             </div>
-        </ProjectsContainer>
+        </ProjectsContainerStatic>
     )
 }
 
