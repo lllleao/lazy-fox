@@ -5,7 +5,6 @@ type Props = {
     image: string
     description: string
     site: string
-    github: string
     alt: string
 }
 
@@ -50,7 +49,6 @@ const SiteCard = ({ description, image, site, alt }: Props) => {
                             </div>
                             <span>Ir para</span>
                         </a>
-
                         <a href="" onClick={(e) => handleGetHeight(e)}>
                             Ler mais
                         </a>

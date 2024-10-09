@@ -45,7 +45,7 @@ export const SubMenu = styled.nav`
 export const Navbar = styled.div`
     display: flex;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
 
     .logo-header {
         width: 150px;

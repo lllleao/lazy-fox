@@ -20,28 +20,24 @@ const SitesProject = () => {
                     novos lançamentos "
                     alt="Cidadeclipse"
                     site="https://cidadeclipse.com/"
-                    github="https://github.com/lllleao/cd-react"
                     image={cidadeClipse}
                 />
                 <SiteCard
                     description="Um projeto de estudos, trata-se de uma página que simula um e-commerce. Existe as abas e categorias que listam os jogos, ao clicar o usuáriuo é direcionado a página do jogo, a qual exibe fotos e vídeos do jogo. Além disso, existe a parte do checkout."
                     alt="EPLAY"
                     site="https://eplay-three-virid.vercel.app/"
-                    github="https://github.com/lllleao/eplay"
                     image={eplay}
                 />
                 <SiteCard
-                    description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
-                    alt="Restaurante fictício Ecommerce"
-                    site="https://efood-umber-kappa.vercel.app/"
-                    github="https://github.com/lllleao/efood"
+                    description="Landing Page sobre um restaurante fictício. Ela tem um carrossel na entrada, um menu de navegação fixo, seções de cardápio, formulário de fale conosco. Landing Page perfeita para apresentar um produto, um projeto, entre outras coisas, para um novo público."
+                    alt="Restaurante fictício Landing Page"
+                    site="https://rest-fic-6mc4.vercel.app/"
                     image={restLanding}
                 />
                 <SiteCard
                     description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
                     alt="Restaurante fictício Ecommerce"
                     site="https://efood-umber-kappa.vercel.app/"
-                    github="https://github.com/lllleao/efood"
                     image={restEcommerce}
                 />
             </S.CardsSitesContainer>

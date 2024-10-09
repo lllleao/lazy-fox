@@ -94,9 +94,6 @@ export const Links = styled.div`
         }
 
         &:nth-child(2) {
-            background-color: #000;
-        }
-        &:nth-child(3) {
             background-color: #279b49;
         }
 
@@ -108,10 +105,6 @@ export const Links = styled.div`
             transform: translateX(1.8rem) scale(1.1) rotate(45deg);
         }
 
-        &:hover .github svg {
-            transform: translateX(2em) scale(1.1);
-        }
-
         &:hover span {
             transform: translateX(6em);
         }
@@ -119,7 +112,6 @@ export const Links = styled.div`
     @media (max-width: 1019px) {
         justify-content: center;
         align-items: center;
-        /* flex-direction: column; */
 
         a {
             margin: 0;
