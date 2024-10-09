@@ -37,13 +37,13 @@ const Global = createGlobalStyle`
     }
 
     body {
-        border-top: 1px solid #000;
+        border-top: 2px solid #000;
         background: url(${starsBigger}) no-repeat;
         background-size: cover;
         background-attachment: fixed;
 
         @media (max-width: 767px) {
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-size: cover;
         }
     }
