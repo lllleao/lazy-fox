@@ -58,4 +58,20 @@ const sliderCards = (
     }
 }
 
+export const priceChange = (
+    event: React.ChangeEvent<HTMLSelectElement>,
+    isStatic: boolean
+) => {
+    if (isStatic) {
+        const prices = [24.99, 47.49, 67.49, 99.99, 187.49, 262.49, 324.99]
+        const index = Number(event.target.value)
+        return prices[index]
+    }
+
+    const prices = [34.99, 62.99, 139.99, 244.49]
+    const index = Number(event.target.value)
+
+    return prices[index]
+}
+
 export default sliderCards

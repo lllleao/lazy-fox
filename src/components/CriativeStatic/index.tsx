@@ -6,8 +6,11 @@ import fgtsFeed from '../../assets/imgs/fgtsFeed.png'
 import carroFeed from '../../assets/imgs/carrosFeed.png'
 import sapatoFeed from '../../assets/imgs/sapatoFeed.png'
 import paisFedd from '../../assets/imgs/paisFeed.jpeg'
-import sliderCards from '../../utils'
+import sliderCards, { priceChange } from '../../utils'
 import { Button, ProductInfo, SubTitleCriatives } from '../../global'
+import OptionsProduct from '../Options'
+import { useDispatch } from 'react-redux'
+import { addCart, open } from '../../store/cart'
 
 const staticCriative = [fgtsFeed, carroFeed, sapatoFeed, paisFedd]
 
@@ -16,8 +19,12 @@ type Props = {
 }
 
 const CriativeStatic = ({ title }: Props) => {
+    const [price, setPrice] = useState(24.99)
+    const [valueSection, setValueSection] = useState('0')
+
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const hasMounted = useRef(false)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         setTimeout(() => {
@@ -31,20 +38,22 @@ const CriativeStatic = ({ title }: Props) => {
         }, 3000)
     }, [])
 
-    const [price, setPrice] = useState('24.99')
-
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const prices = [
-            '24.99',
-            '47.49',
-            '67.49',
-            '99.99',
-            '187.49',
-            '262.49',
-            '324.99'
-        ]
-        const index = Number(event.target.value)
-        setPrice(prices[index])
+        setValueSection(event.target.value)
+        setPrice(priceChange(event, true))
+    }
+
+    const addToCart = () => {
+        dispatch(open())
+        dispatch(
+            addCart({
+                id: 1,
+                isStaticCard: true,
+                name: title,
+                price,
+                quant: valueSection
+            })
+        )
     }
 
     return (
@@ -66,21 +75,12 @@ const CriativeStatic = ({ title }: Props) => {
                 <ProductInfo>
                     <div className="description">
                         <div className="price">
-                            <span>R$ {price.replace('.', ',')}</span>
-                            <select
-                                className="price-values"
-                                name="price-values"
-                                id="price-values"
-                                onChange={(event) => handleChange(event)}
-                            >
-                                <option value="0">1</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">5</option>
-                                <option value="4">10</option>
-                                <option value="5">15</option>
-                                <option value="6">20</option>
-                            </select>
+                            <span>R$ {String(price).replace('.', ',')}</span>
+                            <OptionsProduct
+                                isStaticSection={true}
+                                handleChange={handleChange}
+                                valueSection={valueSection}
+                            />
                         </div>
                         <p>
                             Destaque o melhor da sua marca com nossos criativos
@@ -90,7 +90,7 @@ const CriativeStatic = ({ title }: Props) => {
                             suas redes.
                         </p>
                     </div>
-                    <Button className="button">
+                    <Button onClick={addToCart} className="button">
                         <button>
                             <span className="up">
                                 Eleve sua marca

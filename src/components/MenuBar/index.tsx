@@ -1,11 +1,18 @@
 import { useState } from 'react'
 import logo from '../../assets/imgs/logo-header.svg'
-import { HeaderContainer, Navbar, SubMenu } from './styles'
+import { MenuBarContainer, Navbar, SubMenu } from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { open } from '../../store/cart'
+import { selectorItems } from '../../store/cart/cartSelectos'
+import { RootReducer } from '../../store'
 const MenuBar = () => {
+    const items = useSelector((state: RootReducer) => selectorItems(state))
+
+    const dispatch = useDispatch()
     const [isActive, setIsActive] = useState({
         home: true,
         plans: false,
-        contact: false
+        cart: false
     })
 
     const handleActive = (element: string) => {
@@ -13,21 +20,22 @@ const MenuBar = () => {
             setIsActive({
                 home: true,
                 plans: false,
-                contact: false
+                cart: false
             })
         } else if (element === 'plans') {
             setIsActive({
                 home: false,
                 plans: true,
-                contact: false
+                cart: false
             })
         } else {
-            setIsActive({ home: false, plans: false, contact: true })
+            dispatch(open())
+            setIsActive({ home: false, plans: false, cart: true })
         }
     }
 
     return (
-        <HeaderContainer>
+        <MenuBarContainer>
             <Navbar className="container">
                 <img className="logo-header" srcSet={logo} alt="" />
                 <nav className="menu">
@@ -51,35 +59,47 @@ const MenuBar = () => {
                             </a>
                             <SubMenu>
                                 <ul>
-                                    <li>
-                                        <a href="#static">
+                                    <li className="submenuBar-item">
+                                        <a
+                                            className="submenuBar-item__link"
+                                            href="#static"
+                                        >
                                             Criativos Estáticos
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#animated">
+                                    <li className="submenuBar-item">
+                                        <a
+                                            className="submenuBar-item__link"
+                                            href="#animated"
+                                        >
                                             Criativos Animados
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#sites">Sites</a>
+                                    <li className="submenuBar-item">
+                                        <a
+                                            className="submenuBar-item__link"
+                                            href="#sites"
+                                        >
+                                            Sites
+                                        </a>
                                     </li>
                                 </ul>
                             </SubMenu>
                         </li>
                         <li className="menu__list__item">
                             <a
-                                onClick={() => handleActive('contact')}
-                                className={`${isActive.contact ? 'is-active' : ''} menu__list__item__link`}
-                                href="#contact"
+                                onClick={() => handleActive('cart')}
+                                className={`${isActive.cart ? 'is-active' : ''} menu__list__item__link`}
                             >
-                                <i className="fa-solid fa-cart-shopping" />
+                                <i className="fa-solid fa-cart-shopping" /> -{' '}
+                                {items.length}{' '}
+                                {items.length <= 1 ? 'produto' : 'produtos'}
                             </a>
                         </li>
                     </ul>
                 </nav>
             </Navbar>
-        </HeaderContainer>
+        </MenuBarContainer>
     )
 }
 

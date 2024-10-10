@@ -9,13 +9,16 @@ import motos from '../../assets/videos/motos.mp4'
 import motoCarro from '../../assets/videos/motoCarro.mp4'
 import motosMae from '../../assets/videos/motosMae.mp4'
 import tim from '../../assets/videos/tim.mp4'
-import sliderCards from '../../utils'
+import sliderCards, { priceChange } from '../../utils'
 import {
     Button,
     ProductInfo,
     ProjectsContainer,
     SubTitleCriatives
 } from '../../global'
+import OptionsProduct from '../Options'
+import { useDispatch } from 'react-redux'
+import { addCart, open } from '../../store/cart'
 
 type Props = {
     title: string
@@ -24,14 +27,28 @@ type Props = {
 const animetedCriative = [brisaNet, carros, motos, motoCarro, motosMae, tim]
 const CriativeAnimated = ({ title }: Props) => {
     const cardContainerRef = useRef<HTMLDivElement>(null)
+    const [valueSection, setValueSection] = useState('0')
     const hasMounted = useRef(false)
+    const dispatch = useDispatch()
 
-    const [price, setPrice] = useState('34.99')
+    const [price, setPrice] = useState(34.99)
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const prices = ['34.99', '62.99', '139.99', '244.49']
-        const index = Number(event.target.value)
-        setPrice(prices[index])
+        setValueSection(event.target.value)
+        setPrice(priceChange(event, false))
+    }
+
+    const addToCart = () => {
+        dispatch(open())
+        dispatch(
+            addCart({
+                id: 2,
+                isStaticCard: false,
+                name: title,
+                price: price,
+                quant: valueSection
+            })
+        )
     }
 
     return (
@@ -65,18 +82,14 @@ const CriativeAnimated = ({ title }: Props) => {
                     <ProductInfo>
                         <div className="description">
                             <div className="price">
-                                <span>R$ {price.replace('.', ',')}</span>
-                                <select
-                                    className="price-values"
-                                    name="price-values"
-                                    id="price-values"
-                                    onChange={(event) => handleChange(event)}
-                                >
-                                    <option value="0">1</option>
-                                    <option value="1">2</option>
-                                    <option value="2">5</option>
-                                    <option value="3">10</option>
-                                </select>
+                                <span>
+                                    R$ {String(price).replace('.', ',')}
+                                </span>
+                                <OptionsProduct
+                                    isStaticSection={false}
+                                    handleChange={handleChange}
+                                    valueSection={valueSection}
+                                />
                             </div>
                             <p>
                                 Dê vida ao seu produto com nossos criativos
@@ -85,7 +98,7 @@ const CriativeAnimated = ({ title }: Props) => {
                                 e destacam o valor da sua marca.
                             </p>
                         </div>
-                        <Button className="button">
+                        <Button onClick={addToCart} className="button">
                             <button>
                                 <span className="up">
                                     Eleve sua marca

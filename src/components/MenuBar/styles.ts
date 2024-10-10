@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../global'
 
-export const HeaderContainer = styled.header`
+export const MenuBarContainer = styled.div`
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -23,8 +23,8 @@ export const SubMenu = styled.nav`
     height: 0;
     overflow: hidden;
     transition: height 0.3s;
-    li {
-        a {
+    .submenu-item {
+        &__link {
             text-decoration: none;
             font-family: var(--font-primary);
             font-weight: bold;
@@ -57,7 +57,7 @@ export const Navbar = styled.div`
 
     .menu {
         background-color: ${colors.mainOrange};
-        padding: 0.7rem 1rem;
+        padding: 1rem 1rem;
         border-radius: 1rem;
         &__list {
             display: flex;

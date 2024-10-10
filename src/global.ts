@@ -37,7 +37,6 @@ const Global = createGlobalStyle`
     }
 
     body {
-        border: 2px solid #030513;
         background: url(${starsBigger}) no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -45,6 +44,10 @@ const Global = createGlobalStyle`
         @media (max-width: 767px) {
             background-attachment: scroll;
             background-size: cover;
+        }
+
+        @media (max-width: 993px) {
+            border: 2px solid #030513;
         }
     }
 
@@ -237,15 +240,7 @@ export const ProductInfo = styled.div`
                 text-shadow: 3px 3px 5px #000;
             }
 
-            .price-values {
-                font-size: 1.5rem;
-                padding: 0.2rem;
-                border: none;
-                border-radius: 0.2rem;
-                background-color: ${colors.mainOrange};
-            }
-
-            @media (max-width: 402px) {
+            @media (max-width: 901px) {
                 flex-direction: column;
                 gap: 1rem;
             }
