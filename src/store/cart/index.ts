@@ -22,7 +22,7 @@ type ChangePrice = {
 const initialState: ProductConfig = {
     items: [],
     priceTot: 5,
-    isOpen: true
+    isOpen: false
 }
 
 const cartSlice = createSlice({
