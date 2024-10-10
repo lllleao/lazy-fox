@@ -57,7 +57,7 @@ export const CartContainer = styled.aside`
     }
 
     @media (max-width: 425px) {
-        width: 50%;
+        width: 65%;
 
         .fa-image,
         .fa-film {
