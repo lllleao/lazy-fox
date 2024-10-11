@@ -19,6 +19,7 @@ import {
 import OptionsProduct from '../Options'
 import { useDispatch } from 'react-redux'
 import { addCart, open } from '../../store/cart'
+import { useInView } from 'react-intersection-observer'
 
 type Props = {
     title: string
@@ -26,6 +27,7 @@ type Props = {
 
 const animetedCriative = [brisaNet, carros, motos, motoCarro, motosMae, tim]
 const CriativeAnimated = ({ title }: Props) => {
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
     const cardContainerRef = useRef<HTMLDivElement>(null)
     const [valueSection, setValueSection] = useState('0')
     const hasMounted = useRef(false)
@@ -57,7 +59,7 @@ const CriativeAnimated = ({ title }: Props) => {
                 <SubTitleCriatives className="ant-container">
                     {title}
                 </SubTitleCriatives>
-                <div className="product-info">
+                <div ref={myRef} className="product-info">
                     <CardsAnimated
                         onLoadStart={() =>
                             sliderCards(
@@ -65,7 +67,8 @@ const CriativeAnimated = ({ title }: Props) => {
                                 hasMounted,
                                 'card-anime',
                                 true,
-                                4000
+                                4000,
+                                inView
                             )
                         }
                         ref={cardContainerRef}

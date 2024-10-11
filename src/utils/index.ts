@@ -3,7 +3,8 @@ const sliderCards = (
     hasMounted: React.MutableRefObject<boolean>,
     typeCards: string,
     isAnimeted: boolean,
-    timeInterval: number
+    timeInterval: number,
+    inViwe: boolean
 ) => {
     if (!cardContainerRef.current || hasMounted.current) return
     hasMounted.current = true
@@ -26,6 +27,9 @@ const sliderCards = (
     }
 
     const handleInterval = () => {
+        if (inViwe) {
+            clearInterval(idInterval)
+        }
         const currentSize = cardSize + restartValue
         count++
         count = count === cards.length ? 1 : count
@@ -45,7 +49,7 @@ const sliderCards = (
         restartValue = count === cards.length - 1 ? 0 : currentSize
     }
 
-    setInterval(handleInterval, timeInterval)
+    const idInterval = setInterval(handleInterval, timeInterval)
 
     return () => {
         cards.forEach((item) => {

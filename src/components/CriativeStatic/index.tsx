@@ -11,6 +11,7 @@ import { Button, ProductInfo, SubTitleCriatives } from '../../global'
 import OptionsProduct from '../Options'
 import { useDispatch } from 'react-redux'
 import { addCart, open } from '../../store/cart'
+import { useInView } from 'react-intersection-observer'
 
 const staticCriative = [fgtsFeed, carroFeed, sapatoFeed, paisFedd]
 
@@ -19,6 +20,7 @@ type Props = {
 }
 
 const CriativeStatic = ({ title }: Props) => {
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
     const [price, setPrice] = useState(24.99)
     const [valueSection, setValueSection] = useState('0')
 
@@ -33,11 +35,13 @@ const CriativeStatic = ({ title }: Props) => {
                 hasMounted,
                 'card-static',
                 false,
-                3000
+                3000,
+                inView
             )
         }, 3000)
-    }, [])
+    }, [inView])
 
+    console.log(inView)
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setValueSection(event.target.value)
         setPrice(priceChange(event, true))
@@ -61,7 +65,7 @@ const CriativeStatic = ({ title }: Props) => {
             <SubTitleCriatives className="ant-container">
                 {title}
             </SubTitleCriatives>
-            <div className="product-info">
+            <div ref={myRef} className="product-info">
                 <CardsStaticContainer ref={cardContainerRef}>
                     {staticCriative.map((card) => (
                         <Card img={true} key={card} content={card} />
