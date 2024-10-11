@@ -23,20 +23,22 @@ export const SubMenu = styled.nav`
     height: 0;
     overflow: hidden;
     transition: height 0.3s;
-    .submenu-item {
-        &__link {
-            text-decoration: none;
-            font-family: var(--font-primary);
-            font-weight: bold;
-            display: block;
-            padding: 0.5rem 1rem;
-            background-color: ${colors.mainOrange};
-            width: 180px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
+    ul {
+        .submenuBar-item {
+            &__link {
+                text-decoration: none;
+                font-family: var(--font-primary);
+                font-weight: bold;
+                display: block;
+                padding: 0.5rem 1rem;
+                background-color: ${colors.mainOrange};
+                width: 180px;
+                font-size: 1rem;
+                transition: background-color 0.3s;
 
-            &:hover {
-                background-color: #cf6c0a;
+                &:hover {
+                    background-color: #cf6c0a;
+                }
             }
         }
     }

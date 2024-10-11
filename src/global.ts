@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import LemonLight from './assets/fonts/lemonLight.otf'
 import LemonBold from './assets/fonts/LEMONMILK-Bold.otf'
-import starsBigger from './assets/imgs/back-novo-esp-menor.svg'
+import starsMinor from './assets/imgs/back-novo-esp-menor.svg'
 
 export const colors = {
     mainOrange: '#ff7f00'
@@ -37,9 +37,9 @@ const Global = createGlobalStyle`
     }
 
     body {
-        background: url(${starsBigger}) no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+    background: url(${starsMinor}) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
         @media (max-width: 767px) {
             background-attachment: scroll;
