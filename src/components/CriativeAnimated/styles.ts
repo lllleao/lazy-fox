@@ -8,7 +8,7 @@ export const CardsAnimated = styled.div`
 
     ${CardContainer} {
         display: block;
-        margin: 0 112px 16px 0;
+        margin: 0 7rem 32px 0;
         height: 578px;
 
         video {
@@ -18,7 +18,7 @@ export const CardsAnimated = styled.div`
         }
 
         @media (max-width: 901px) {
-            margin: 0 auto 32px auto;
+            margin: 0 auto 2rem auto;
         }
     }
 `
