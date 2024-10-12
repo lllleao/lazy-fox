@@ -41,7 +41,6 @@ const CriativeStatic = ({ title }: Props) => {
         }, 3000)
     }, [inView])
 
-    console.log(inView)
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setValueSection(event.target.value)
         setPrice(priceChange(event, true))

@@ -174,7 +174,8 @@ export const SubTitleCriatives = styled.h3`
 export const Button = styled.div`
     display: inline-block;
 
-    button {
+    button,
+    a {
         position: relative;
 
         font-size: 1.2rem;
@@ -207,7 +208,6 @@ export const Button = styled.div`
             justify-content: center;
             background-color: #b80303;
             transform: translateY(100%);
-            /* padding: 0 0.5rem; */
         }
 
         &:hover .up {

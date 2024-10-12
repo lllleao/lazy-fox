@@ -9,8 +9,8 @@ const sliderCards = (
     if (!cardContainerRef.current || hasMounted.current) return
     hasMounted.current = true
     const cards = cardContainerRef.current.querySelectorAll(`.${typeCards}`)
-    const cardSize = isAnimeted
-        ? cards[0]?.clientHeight + 32
+    let cardSize = isAnimeted
+        ? cards[0]?.clientHeight
         : cards[0]?.clientWidth + 64
     let restartValue = 0
     let count = 0
@@ -20,7 +20,7 @@ const sliderCards = (
             if (count === cards.length - 1) {
                 element.style.transition = 'none'
                 element.style.transform = isAnimeted
-                    ? `translateY(1rem)`
+                    ? `translateY(0)`
                     : `translateX(1rem)`
             }
         }
@@ -30,6 +30,11 @@ const sliderCards = (
         if (inViwe) {
             clearInterval(idInterval)
         }
+
+        if (isAnimeted && count === 0) {
+            cardSize += 36
+        }
+
         const currentSize = cardSize + restartValue
         count++
         count = count === cards.length ? 1 : count
@@ -72,7 +77,7 @@ export const priceChange = (
         return prices[index]
     }
 
-    const prices = [34.99, 62.99, 139.99, 244.49]
+    const prices = [34.99, 62.99, 139.99, 244.99]
     const index = Number(event.target.value)
 
     return prices[index]

@@ -30,7 +30,8 @@ const CartCard = ({
         dispatch(
             changePrice({
                 idCard: id,
-                priceChanged: priceChange(event, isCardStatic)
+                priceChanged: priceChange(event, isCardStatic),
+                quantChande: event.target.value
             })
         )
     }

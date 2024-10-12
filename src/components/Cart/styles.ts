@@ -14,7 +14,7 @@ export const CartContainer = styled.aside`
     .close {
         margin-bottom: 1rem;
 
-        .fa-x {
+        .fa-chevron-right {
             cursor: pointer;
             padding: 0.5rem;
             font-size: 1.5rem;
@@ -36,7 +36,9 @@ export const CartContainer = styled.aside`
             font-size: 1.4rem;
         }
 
-        button {
+        a {
+            display: block;
+            text-decoration: none;
             cursor: pointer;
             margin-top: 1rem;
             background-color: #138813;
@@ -44,6 +46,7 @@ export const CartContainer = styled.aside`
             border: none;
             border: 2px solid #fff;
             font-size: 1.2rem;
+            font-family: var(--font-primary);
             transition: background-color 0.3s;
 
             &:hover {
@@ -66,7 +69,7 @@ export const CartContainer = styled.aside`
         }
 
         .close {
-            .fa-x {
+            .fa-chevron-right {
                 font-size: 1rem;
             }
         }

@@ -19,6 +19,7 @@ export const CardBack = styled.div<Props>`
     transition: margin 0.3s;
     p {
         text-align: justify;
+        font-family: var(--font-primary);
         line-height: 2rem;
     }
 

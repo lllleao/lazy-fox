@@ -42,7 +42,11 @@ const SitesProject = () => {
                 />
             </S.CardsSitesContainer>
             <Button className="button">
-                <button>
+                <a
+                    href="https://wa.link/vl4ncr"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <span className="up">
                         Faça seu orçamento
                         <svg
@@ -76,7 +80,7 @@ const SitesProject = () => {
                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                         </svg>
                     </span>
-                </button>
+                </a>
             </Button>
         </S.SitesSection>
     )

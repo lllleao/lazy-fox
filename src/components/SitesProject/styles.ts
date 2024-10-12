@@ -8,7 +8,10 @@ export const SitesSection = styled.section`
         margin-top: 2rem;
         display: flex;
         justify-content: center;
-        button {
+        a {
+            font-family: var(--font-primary);
+            text-decoration: none;
+            display: block;
             width: 300px;
         }
     }

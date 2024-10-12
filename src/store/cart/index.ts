@@ -12,17 +12,22 @@ type ProductConfig = {
     items: Product[]
     priceTot: number
     isOpen: boolean
+    quantStatic: string
+    quantAnime: string
 }
 
 type ChangePrice = {
     priceChanged: number
     idCard: number
+    quantChande: string
 }
 
 const initialState: ProductConfig = {
     items: [],
     priceTot: 5,
-    isOpen: false
+    isOpen: false,
+    quantStatic: '',
+    quantAnime: ''
 }
 
 const cartSlice = createSlice({
@@ -35,8 +40,19 @@ const cartSlice = createSlice({
             state.items.map((item) => {
                 if (item.id === acticon.payload.idCard) {
                     item.price = priceChanged
+                    item.quant = acticon.payload.quantChande
                 }
             })
+        },
+        changeQuant: (
+            state,
+            acticon: PayloadAction<{ newQuant: string; isStatic: boolean }>
+        ) => {
+            if (acticon.payload.isStatic) {
+                state.quantStatic = acticon.payload.newQuant
+            } else {
+                state.quantAnime = acticon.payload.newQuant
+            }
         },
         totalPrice: (state, acticon: PayloadAction<number>) => {
             const priceTotal = acticon.payload
@@ -69,6 +85,13 @@ const cartSlice = createSlice({
     }
 })
 
-export const { changePrice, addCart, totalPrice, open, close, deleteCart } =
-    cartSlice.actions
+export const {
+    changePrice,
+    addCart,
+    totalPrice,
+    open,
+    close,
+    deleteCart,
+    changeQuant
+} = cartSlice.actions
 export default cartSlice.reducer

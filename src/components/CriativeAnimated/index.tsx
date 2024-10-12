@@ -6,10 +6,15 @@ import { CardsAnimated } from './styles'
 import brisaNet from '../../assets/videos/brisaNet.mp4'
 import carros from '../../assets/videos/carros.mp4'
 import motos from '../../assets/videos/motos.mp4'
-import motoCarro from '../../assets/videos/motoCarro.mp4'
+import motoCarro from '../../assets/videos/motos2.mp4'
 import motosMae from '../../assets/videos/motosMae.mp4'
-import tim from '../../assets/videos/tim.mp4'
+import setembro7 from '../../assets/videos/7setembro.mp4'
 import sliderCards, { priceChange } from '../../utils'
+import carros1 from '../../assets/videos/carros1.mp4'
+import iphone from '../../assets/videos/iphone.mp4'
+import natal from '../../assets/videos/natal.mp4'
+import pendrive from '../../assets/videos/pendrive.mp4'
+
 import {
     Button,
     ProductInfo,
@@ -25,7 +30,18 @@ type Props = {
     title: string
 }
 
-const animetedCriative = [brisaNet, carros, motos, motoCarro, motosMae, tim]
+const animetedCriative = [
+    setembro7,
+    carros1,
+    iphone,
+    natal,
+    pendrive,
+    brisaNet,
+    carros,
+    motos,
+    motoCarro,
+    motosMae
+]
 const CriativeAnimated = ({ title }: Props) => {
     const { ref: myRef, inView } = useInView({ threshold: 0.2 })
     const cardContainerRef = useRef<HTMLDivElement>(null)

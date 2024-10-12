@@ -21,6 +21,19 @@ const Cart = () => {
         return priceTotal
     }
 
+    const quantOfProduct = (quant: string, isStatic: boolean) => {
+        const index = Number(quant)
+        const criativeStatic = [1, 2, 3, 5, 10, 15, 20]
+        const criativeAnimated = [1, 2, 5, 10]
+
+        if (isStatic) return criativeStatic[index]
+        return criativeAnimated[index]
+    }
+
+    const message = `Gostaria de:%0A${items.map((item) => {
+        return `${quantOfProduct(item.quant, item.isStaticCard)} ${item.name}`
+    })}%0ATotal de: ${calcPriceTot()}`
+
     return (
         <>
             <OverLay
@@ -28,26 +41,20 @@ const Cart = () => {
                 onClick={() => dispatch(close())}
             />
             <CartContainer className={isOpen ? 'cartClosed' : ''}>
+                <div className="close">
+                    <i
+                        onClick={() => dispatch(close())}
+                        className="fa-solid fa-chevron-right"
+                    />
+                </div>
                 {items.length === 0 ? (
                     <>
-                        <div className="close">
-                            <i
-                                onClick={() => dispatch(close())}
-                                className="fa-solid fa-x"
-                            />
-                        </div>
                         <div className="total-price">
                             <span>Não há items no carrinho</span>
                         </div>
                     </>
                 ) : (
                     <>
-                        <div className="close">
-                            <i
-                                onClick={() => dispatch(close())}
-                                className="fa-solid fa-x"
-                            />
-                        </div>
                         {items.map(
                             ({ id, isStaticCard, name, price, quant }) => (
                                 <div className="products" key={id}>
@@ -66,7 +73,12 @@ const Cart = () => {
                             <span>
                                 O valor total é de {calcPriceTot().toFixed(2)}
                             </span>
-                            <button>Finalizar Compra</button>
+                            <a
+                                target="_black"
+                                href={`https://wa.me/558592234787?text=${message.replace(',', '%0A')}`}
+                            >
+                                Finalizar Compra
+                            </a>
                         </div>
                     </>
                 )}
