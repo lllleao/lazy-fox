@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Card from '../Card'
 import { CardsAnimated } from './styles'
 import sliderCards, { priceChange } from '../../utils'
@@ -31,16 +31,16 @@ type Props = {
 }
 
 const animetedCriative = [
-    setembro7,
-    carros1,
-    iphone,
-    natal,
-    pendrive,
     brisaNet,
     carros,
     motos,
     motoCarro,
-    motosMae
+    motosMae,
+    setembro7,
+    carros1,
+    iphone,
+    natal,
+    pendrive
 ]
 const CriativeAnimated = ({ title }: Props) => {
     const { ref: myRef, inView } = useInView({ threshold: 0.2 })
@@ -48,6 +48,19 @@ const CriativeAnimated = ({ title }: Props) => {
     const [valueSection, setValueSection] = useState('0')
     const hasMounted = useRef(false)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        setTimeout(() => {
+            sliderCards(
+                cardContainerRef,
+                hasMounted,
+                'card-anime',
+                true,
+                4000,
+                inView
+            )
+        }, 3000)
+    }, [inView])
 
     const [price, setPrice] = useState(34.99)
 
@@ -76,19 +89,7 @@ const CriativeAnimated = ({ title }: Props) => {
                     {title}
                 </SubTitleCriatives>
                 <div ref={myRef} className="product-info">
-                    <CardsAnimated
-                        onLoadStart={() =>
-                            sliderCards(
-                                cardContainerRef,
-                                hasMounted,
-                                'card-anime',
-                                true,
-                                4000,
-                                inView
-                            )
-                        }
-                        ref={cardContainerRef}
-                    >
+                    <CardsAnimated ref={cardContainerRef}>
                         {animetedCriative.map((card) => (
                             <Card img={false} key={card} content={card} />
                         ))}
