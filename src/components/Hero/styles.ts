@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { colors } from '../../global'
-import starsMinor from '../../assets/imgs/back-novo-esp-menor.svg'
+import starsBig from '../../assets/imgs/back-star-big.svg'
+import starsSmall from '../../assets/imgs/back-star-small.png'
 
 export const HeroSection = styled.section`
-    background: url(${starsMinor});
+    background: url(${starsBig});
     background-size: cover;
     background-repeat: no-repeat;
     padding: 16rem 0;
@@ -13,8 +14,6 @@ export const HeroSection = styled.section`
         display: flex;
         gap: 4rem;
         justify-content: space-between;
-        /* align-items: center; */
-        /* height: 410px; */
         padding: 2rem;
         border: 2px solid #fff;
         border-radius: 2rem 1rem;
@@ -37,21 +36,35 @@ export const HeroSection = styled.section`
 
     .rocket {
         position: absolute;
-        right: 0;
+        right: -2rem;
         top: -5rem;
-        max-width: clamp(256px, 40vw, 550px);
+        max-width: clamp(256px, 40vw, 510px);
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
+    }
+
+    @media (max-width: 767px) {
+        background: url(${starsSmall});
+
+        .container {
+            width: 100%;
+            div {
+                width: 100%;
+            }
+        }
+
+        .rocket {
+            top: 0;
+        }
     }
 `
 
 export const Title = styled.h1`
     font-family: 'LemonLight';
     font-weight: normal;
-    font-size: clamp(1rem, 10vw, 3rem);
+    font-size: clamp(1rem, 10vw, 2.2rem);
     text-shadow: 3px 3px 5px #000;
-    /* padding-top: 3rem; */
     animation: float1 1.5s ease-in;
 
     .second {
@@ -63,7 +76,7 @@ export const Title = styled.h1`
 
 export const TextHome = styled.p`
     font-family: var(--font-primary);
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
     text-align: start;
     margin-top: 1rem;
     word-spacing: 0.3rem;
