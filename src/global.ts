@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import LemonLight from './assets/fonts/lemonLight.otf'
 import LemonBold from './assets/fonts/LEMONMILK-Bold.otf'
-import starsMinor from './assets/imgs/back-novo-esp-menor.svg'
 
 export const colors = {
     mainOrange: '#ff7f00'
@@ -37,18 +36,7 @@ const Global = createGlobalStyle`
     }
 
     body {
-    background: url(${starsMinor}) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-        @media (max-width: 767px) {
-            background-attachment: scroll;
-            background-size: cover;
-        }
-
-        @media (max-width: 993px) {
-            border: 2px solid #030513;
-        }
+        background-color: #222;
     }
 
     .container {
@@ -147,7 +135,6 @@ export const SubTitleCriatives = styled.h3`
     margin-bottom: 4rem;
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    /* width: 30%; */
     border: 2px solid #ff7f00;
     border-image: linear-gradient(
             144deg,

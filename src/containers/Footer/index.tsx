@@ -19,10 +19,22 @@ const Footer = () => {
                     <p>Todos os direitos resrvados - Lazy Fox &copy;</p>
                     <ul className="social-links">
                         <li>
-                            <i className="fa-brands fa-instagram" />
+                            <a
+                                target="_blank"
+                                href="https://www.instagram.com/designlazyfox"
+                                rel="noreferrer"
+                            >
+                                <i className="fa-brands fa-instagram" />
+                            </a>
                         </li>
                         <li>
-                            <i className="fa-brands fa-facebook" />
+                            <a
+                                target="_blank"
+                                href="https://www.facebook.com/lazyfoxdesignlfd"
+                                rel="noreferrer"
+                            >
+                                <i className="fa-brands fa-facebook" />
+                            </a>
                         </li>
                     </ul>
                 </div>

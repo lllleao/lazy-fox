@@ -1,30 +1,35 @@
 import styled from 'styled-components'
 import { colors } from '../../global'
+import starsMinor from '../../assets/imgs/back-novo-esp-menor.svg'
 
 export const HeroSection = styled.section`
-    width: 90%;
-    padding: 17rem 0;
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-    height: 100vh;
+    background: url(${starsMinor});
+    background-size: cover;
+    .container {
+        width: 90%;
+        padding: 17rem 0;
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        height: 100vh;
+
+        @media (max-width: 1023px) {
+            flex-direction: column-reverse;
+            padding: 7rem 0 0 0;
+            height: auto;
+            gap: 3rem;
+        }
+
+        @media (max-width: 992px) {
+            padding: 6rem 0;
+        }
+    }
 
     .rocket {
         max-width: clamp(256px, 40vw, 650px);
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
-    }
-
-    @media (max-width: 1023px) {
-        flex-direction: column-reverse;
-        padding: 7rem 0 0 0;
-        height: auto;
-        gap: 3rem;
-    }
-
-    @media (max-width: 992px) {
-        padding: 1rem 0;
     }
 `
 

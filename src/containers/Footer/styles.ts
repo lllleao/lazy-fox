@@ -33,19 +33,24 @@ export const FooterContainer = styled.footer`
                 justify-content: center;
 
                 li {
-                    cursor: pointer;
                     width: 40px;
                     height: 40px;
                     border-radius: 50px;
-                    line-height: 45px;
-                    text-align: center;
                     transition: background-color 0.3s;
+                    a {
+                        display: block;
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50px;
+                        line-height: 45px;
+                        text-align: center;
 
-                    i {
-                        font-size: 1.5rem;
-                        transition: color 0.3s;
+                        i {
+                            font-size: 1.5rem;
+                            transition: color 0.3s;
+                        }
                     }
-
                     &:hover {
                         &:nth-child(1) {
                             background-color: #f61d4b;

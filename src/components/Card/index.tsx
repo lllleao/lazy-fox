@@ -16,6 +16,10 @@ const Card = ({ content, img }: Props) => {
             video.play()
         }
     }, [])
+
+    // const handleSlider = (event: HTMLImageElement) => {
+
+    // }
     return (
         <CardContainer
             className={img ? 'card-static' : 'card-anime'}

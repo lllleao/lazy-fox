@@ -11,7 +11,6 @@ export const MenuBarContainer = styled.div`
         width: 90%;
     }
     @media (max-width: 992px) {
-        position: static;
         backdrop-filter: blur(0);
     }
 `
