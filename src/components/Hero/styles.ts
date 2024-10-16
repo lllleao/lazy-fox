@@ -6,13 +6,22 @@ export const HeroSection = styled.section`
     background: url(${starsMinor});
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 16rem 0;
     .container {
-        width: 90%;
-        padding: 17rem 0;
+        position: relative;
+        width: 70%;
         display: flex;
         gap: 4rem;
-        align-items: center;
-        height: 100vh;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* height: 410px; */
+        padding: 2rem;
+        border: 2px solid #fff;
+        border-radius: 2rem 1rem;
+
+        div {
+            width: 50%;
+        }
 
         @media (max-width: 1023px) {
             flex-direction: column-reverse;
@@ -27,7 +36,10 @@ export const HeroSection = styled.section`
     }
 
     .rocket {
-        max-width: clamp(256px, 40vw, 650px);
+        position: absolute;
+        right: 0;
+        top: -5rem;
+        max-width: clamp(256px, 40vw, 550px);
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
@@ -39,7 +51,7 @@ export const Title = styled.h1`
     font-weight: normal;
     font-size: clamp(1rem, 10vw, 3rem);
     text-shadow: 3px 3px 5px #000;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     animation: float1 1.5s ease-in;
 
     .second {
