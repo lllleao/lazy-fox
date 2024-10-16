@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
     background: url(${starsBig});
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 16rem 0;
+    padding: 12rem 0 6rem;
     .container {
         position: relative;
         width: 70%;
@@ -22,15 +22,35 @@ export const HeroSection = styled.section`
             width: 50%;
         }
 
-        @media (max-width: 1023px) {
-            flex-direction: column-reverse;
-            padding: 7rem 0 0 0;
-            height: auto;
-            gap: 3rem;
+        @media (max-width: 1064px) {
+            width: 90%;
+            div {
+                width: 100%;
+            }
+
+            .rocket {
+                top: -89%;
+                right: 27%;
+            }
         }
 
-        @media (max-width: 992px) {
-            padding: 6rem 0;
+        @media (max-width: 924px) {
+            .rocket {
+                top: -98%;
+                max-width: clamp(256px, 40vw, 510px);
+            }
+        }
+
+        @media (max-width: 615px) {
+            .rocket {
+                top: -68%;
+                right: 20%;
+            }
+        }
+        @media (max-width: 384px) {
+            .rocket {
+                right: 10%;
+            }
         }
     }
 
@@ -38,32 +58,25 @@ export const HeroSection = styled.section`
         position: absolute;
         right: -2rem;
         top: -5rem;
-        max-width: clamp(256px, 40vw, 510px);
+        max-width: clamp(256px, 35vw, 510px);
         animation:
             floatRocket 3s infinite 2s,
             float3 2s;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1064px) {
+        padding: 25rem 0 6rem;
+    }
+
+    @media (max-width: 425px) {
         background: url(${starsSmall});
-
-        .container {
-            width: 100%;
-            div {
-                width: 100%;
-            }
-        }
-
-        .rocket {
-            top: 0;
-        }
     }
 `
 
 export const Title = styled.h1`
     font-family: 'LemonLight';
     font-weight: normal;
-    font-size: clamp(1rem, 10vw, 2.2rem);
+    font-size: clamp(1rem, 7vw, 2.2rem);
     text-shadow: 3px 3px 5px #000;
     animation: float1 1.5s ease-in;
 
@@ -76,7 +89,7 @@ export const Title = styled.h1`
 
 export const TextHome = styled.p`
     font-family: var(--font-primary);
-    font-size: clamp(1rem, 5vw, 1.2rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
     text-align: start;
     margin-top: 1rem;
     word-spacing: 0.3rem;
