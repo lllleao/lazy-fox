@@ -5,6 +5,7 @@ import starsMinor from '../../assets/imgs/back-novo-esp-menor.svg'
 export const HeroSection = styled.section`
     background: url(${starsMinor});
     background-size: cover;
+    background-repeat: no-repeat;
     .container {
         width: 90%;
         padding: 17rem 0;
