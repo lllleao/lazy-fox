@@ -65,6 +65,10 @@ export const HeroSection = styled.section`
             float3 2s;
     }
 
+    @media (min-width: 1200px) {
+        height: 100vh;
+    }
+
     @media (max-width: 768px) {
         padding: 13rem 0 9rem;
     }
