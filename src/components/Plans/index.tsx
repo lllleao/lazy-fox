@@ -1,14 +1,16 @@
 import CriativeAnimated from '../CriativeAnimated'
 import CriativeStatic from '../CriativeStatic'
-import { PlansContainer, Title } from './styles'
+import { Title } from './styles'
 
 const Plans = () => {
     return (
-        <PlansContainer id="plans">
-            <Title>ESCOLHA SEUS SERVIÇOS!</Title>
+        <section id="plans">
+            <Title>
+                <span>ESCOLHA SEUS SERVIÇOS!</span>
+            </Title>
             <CriativeStatic title="CRIATIVOS ESTÁTICOS" />
             <CriativeAnimated title="CRIATIVOS ANIMADOS" />
-        </PlansContainer>
+        </section>
     )
 }
 
