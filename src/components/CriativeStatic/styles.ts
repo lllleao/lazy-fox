@@ -5,14 +5,14 @@ import { ProductInfo, ProjectsContainer } from '../../global'
 export const CardsStaticContainer = styled.div`
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     height: clamp(250px, 90vw, 598px);
-    width: clamp(250px, 90vw, 634px);
+    width: clamp(250px, 90vw, 532px);
     margin-left: 1rem;
     overflow: hidden;
 
     ${CardContainer} {
-        height: clamp(250px, 85vw, 598px);
+        height: clamp(250px, 85vw, 500px);
         width: clamp(250px, 85vw, 634px);
     }
 

@@ -9,9 +9,7 @@ const sliderCards = (
     if (!cardContainerRef.current || hasMounted.current) return
     hasMounted.current = true
     const cards = cardContainerRef.current.querySelectorAll(`.${typeCards}`)
-    let cardSize = isAnimeted
-        ? cards[0]?.clientHeight
-        : cards[0]?.clientWidth + 64
+    let cardSize = isAnimeted ? cards[0]?.clientHeight : cards[0]?.clientWidth
     let restartValue = 0
     let count = 0
 
@@ -33,6 +31,10 @@ const sliderCards = (
 
         if (isAnimeted && count === 0) {
             cardSize += 36
+        }
+
+        if (!isAnimeted && count === 0) {
+            cardSize += 32
         }
 
         const currentSize = cardSize + restartValue
