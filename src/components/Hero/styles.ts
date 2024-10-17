@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
     background: url(${starsBig});
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 12rem 0 6rem;
+    padding: 12rem 0 30rem;
     .container {
         position: relative;
         width: 70%;
@@ -22,26 +22,38 @@ export const HeroSection = styled.section`
             width: 50%;
         }
 
-        @media (max-width: 1064px) {
+        @media (max-width: 767px) {
+            flex-direction: column-reverse;
+            align-items: center;
             width: 90%;
+            gap: 2rem;
             div {
                 width: 100%;
             }
 
             .rocket {
+                margin-top: -9rem;
+                max-width: clamp(256px, 60vw, 510px);
+                position: static;
                 top: -89%;
                 right: 27%;
             }
         }
 
-        @media (max-width: 924px) {
+        @media (max-width: 640px) {
+            .rocket {
+                max-width: clamp(256px, 80vw, 510px);
+            }
+        }
+
+        /* @media (max-width: 924px) {
             .rocket {
                 top: -98%;
                 max-width: clamp(256px, 40vw, 510px);
             }
-        }
+        } */
 
-        @media (max-width: 615px) {
+        /* @media (max-width: 615px) {
             .rocket {
                 top: -68%;
                 right: 20%;
@@ -51,7 +63,7 @@ export const HeroSection = styled.section`
             .rocket {
                 right: 10%;
             }
-        }
+        } */
     }
 
     .rocket {
@@ -64,8 +76,8 @@ export const HeroSection = styled.section`
             float3 2s;
     }
 
-    @media (max-width: 1064px) {
-        padding: 25rem 0 6rem;
+    @media (max-width: 768px) {
+        padding: 13rem 0 9rem;
     }
 
     @media (max-width: 425px) {

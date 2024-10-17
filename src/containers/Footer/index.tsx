@@ -16,7 +16,7 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="copy">
-                    <p>Todos os direitos resrvados - Lazy Fox &copy;</p>
+                    <p>Todos os direitos reservados - Lazy Fox &copy;</p>
                     <ul className="social-links">
                         <li>
                             <a
