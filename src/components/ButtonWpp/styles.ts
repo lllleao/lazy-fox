@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ButtonWppContainer = styled.div`
+export const ButtonWppContainer = styled.a`
     position: fixed;
     bottom: 5rem;
     right: 2rem;
@@ -23,7 +23,6 @@ export const Wpp = styled.div`
     border-radius: 50%;
     line-height: 60px;
     text-align: center;
-    cursor: pointer;
 
     .fa-whatsapp {
         font-size: 2rem;

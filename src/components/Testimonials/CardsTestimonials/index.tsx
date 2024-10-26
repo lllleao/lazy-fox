@@ -1,10 +1,15 @@
 import { CardContainer } from './styles'
 
-const CardsTestimonials = () => {
+type Props = {
+    children: string
+    client: string
+}
+
+const CardsTestimonials = ({ children, client }: Props) => {
     return (
         <CardContainer>
             <div className="title-stars">
-                <h4>John Doe</h4>
+                <h4>{client}</h4>
                 <div className="stars">
                     <svg
                         fill="green"
@@ -44,10 +49,7 @@ const CardsTestimonials = () => {
                 </div>
             </div>
             <div className="testimonials">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Deserunt voluptatem alias ut provident sapiente repellendus.
-                </p>
+                <p>{children}</p>
             </div>
         </CardContainer>
     )
