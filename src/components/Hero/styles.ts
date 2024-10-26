@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
     background: url(${starsBig});
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 16em 0 13rem;
+    padding: 16rem 0 13rem;
     .container {
         position: relative;
         width: 70%;
@@ -70,7 +70,7 @@ export const HeroSection = styled.section`
     }
 
     @media (max-width: 768px) {
-        padding: 13rem 0 9rem;
+        padding: 15rem 0 9rem;
     }
 
     @media (max-width: 425px) {

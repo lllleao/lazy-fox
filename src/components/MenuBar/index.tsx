@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import logo from '../../assets/imgs/logo-header.svg'
+import logoVertical from '../../assets/imgs/LOGO VERTICAL.svg'
+import logoHorizontal from '../../assets/imgs/LOGO HORIZONTAL.svg'
 import { MenuBarContainer, Navbar, SubMenu } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { open } from '../../store/cart'
@@ -37,7 +38,16 @@ const MenuBar = () => {
     return (
         <MenuBarContainer>
             <Navbar className="container">
-                <img className="logo-header" srcSet={logo} alt="" />
+                <img
+                    className="logo-header horizontal"
+                    srcSet={logoHorizontal}
+                    alt=""
+                />
+                <img
+                    className="logo-header vertical"
+                    srcSet={logoVertical}
+                    alt=""
+                />
                 <nav className="menu">
                     <ul className="menu__list">
                         <li className="menu__list__item">

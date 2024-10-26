@@ -10,8 +10,18 @@ export const MenuBarContainer = styled.div`
     .container {
         width: 90%;
     }
+    .vertical {
+        display: none;
+    }
     @media (max-width: 992px) {
         backdrop-filter: blur(10px);
+
+        .vertical {
+            display: block;
+        }
+        .horizontal {
+            display: none;
+        }
     }
 `
 
@@ -54,6 +64,10 @@ export const Navbar = styled.div`
         @media (max-width: 992px) {
             margin: 0 auto;
         }
+    }
+
+    .vertical {
+        width: 100px;
     }
 
     .menu {
