@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const TestimonialsContainer = styled.section`
     padding-top: 4rem;
     .title-testimo {
-        font-size: 2rem;
+        font-size: 1.3rem;
         text-align: center;
-        font-family: var(--font-primary);
+        font-family: 'LemonLight';
     }
 
     .cards-testim {

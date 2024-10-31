@@ -36,7 +36,7 @@ const Global = createGlobalStyle`
     }
 
     body {
-        background-color: #222;
+        background-color: #000;
     }
 
     .container {
@@ -109,7 +109,6 @@ const Global = createGlobalStyle`
 // Criativos
 export const ProjectsContainer = styled.div`
     &.container {
-        padding-top: 95.5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -130,27 +129,11 @@ export const ProjectsContainer = styled.div`
 `
 
 export const SubTitleCriatives = styled.h3`
-    font-family: var(--font-primary);
+    font-family: 'LemonLight';
     text-align: center;
     margin-bottom: 4rem;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border: 2px solid #ff7f00;
-    border-image: linear-gradient(
-            144deg,
-            transparent,
-            transparent,
-            #ff7f00,
-            #ff7f00,
-            #ff7f00,
-            #ff7f00,
-            #ff7f00,
-            #ff7f00,
-            #ff7f00,
-            transparent,
-            transparent
-        )
-        1;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
 
     img {
         margin-left: 1rem;
@@ -164,15 +147,14 @@ export const Button = styled.div`
     button,
     a {
         position: relative;
-
-        font-size: 1.2rem;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         border-radius: 1rem;
         box-shadow: 0px 4px 5px 1px #000;
         overflow: hidden;
         border: 2px solid #fff;
-        width: 235px;
+        width: 200px;
 
         .up {
             display: flex;
@@ -215,15 +197,14 @@ export const Button = styled.div`
 export const ProductInfo = styled.div`
     width: 40%;
     .description {
-        font-family: var(--font-primary);
-
         .price {
+            font-family: 'LemonLight';
             display: flex;
             align-items: center;
             gap: 3rem;
             span {
                 font-weight: bold;
-                font-size: 3rem;
+                font-size: 2rem;
                 text-shadow: 3px 3px 5px #000;
             }
 
@@ -235,9 +216,10 @@ export const ProductInfo = styled.div`
 
         p {
             text-align: justify;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             line-height: 1.8rem;
             margin: 1.5rem 0;
+            font-family: var(--font-primary);
         }
     }
 

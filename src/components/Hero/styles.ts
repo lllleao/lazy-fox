@@ -1,12 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../../global'
-import starsBig from '../../assets/imgs/back-star-big.svg'
-import starsSmall from '../../assets/imgs/back-star-small.png'
 
 export const HeroSection = styled.section`
-    background: url(${starsBig});
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 16rem 0 13rem;
     .container {
         position: relative;
@@ -14,9 +8,6 @@ export const HeroSection = styled.section`
         display: flex;
         gap: 4rem;
         justify-content: space-between;
-        padding: 2rem;
-        border: 2px solid #fff;
-        border-radius: 2rem 1rem;
 
         div {
             width: 50%;
@@ -72,10 +63,6 @@ export const HeroSection = styled.section`
     @media (max-width: 768px) {
         padding: 15rem 0 9rem;
     }
-
-    @media (max-width: 425px) {
-        background: url(${starsSmall});
-    }
 `
 
 export const Title = styled.h1`
@@ -84,12 +71,6 @@ export const Title = styled.h1`
     font-size: clamp(1rem, 7vw, 2.2rem);
     text-shadow: 3px 3px 5px #000;
     animation: float1 1.5s ease-in;
-
-    .second {
-        font-family: 'LemonBold';
-        color: ${colors.mainOrange};
-        text-shadow: 0 0 8px #ff7f00;
-    }
 `
 
 export const TextHome = styled.p`

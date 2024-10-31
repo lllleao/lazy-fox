@@ -1,6 +1,6 @@
 import { HeroSection, TextHome, Title } from './styles'
 
-import rocket from '../../assets/imgs/fox-hero.png'
+import manRun from '../../assets/imgs/manRun.png'
 
 const Hero = () => {
     return (
@@ -19,7 +19,7 @@ const Hero = () => {
                         impulsionar o seu sucesso online!
                     </TextHome>
                 </div>
-                <img className="rocket" src={rocket} alt="" />
+                <img className="rocket" src={manRun} alt="" />
             </div>
         </HeroSection>
     )

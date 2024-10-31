@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
                     text-decoration: none;
 
                     &:hover {
-                        background-color: #f61d4b;
+                        background-color: #000;
                     }
                 }
             }

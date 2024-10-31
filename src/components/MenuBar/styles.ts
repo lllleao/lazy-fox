@@ -72,7 +72,7 @@ export const Navbar = styled.div`
 
     .menu {
         background-color: ${colors.mainOrange};
-        padding: 1rem 1rem;
+        padding: 0.9rem;
         border-radius: 1rem;
         &__list {
             display: flex;

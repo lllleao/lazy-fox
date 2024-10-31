@@ -18,8 +18,8 @@ export const SitesSection = styled.section`
 `
 
 export const TitleSites = styled.h3`
-    font-family: var(--font-primary);
-    font-size: 2rem;
+    font-family: 'LemonLight';
+    font-size: 1.3rem;
     text-align: center;
 `
 export const Tags = styled.ul`

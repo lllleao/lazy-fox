@@ -3,13 +3,13 @@ import { CardContainer } from '../Card/styles'
 import { ProjectsContainer } from '../../global'
 
 export const CardsAnimated = styled.div`
-    height: 598px;
+    height: 498px;
     overflow: hidden;
 
     ${CardContainer} {
         display: block;
         margin: 0 7rem 32px 0;
-        height: 578px;
+        height: 478px;
 
         video {
             height: 100%;

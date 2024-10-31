@@ -7,12 +7,12 @@ export const CardsStaticContainer = styled.div`
     align-items: center;
     gap: 2rem;
     height: clamp(250px, 90vw, 598px);
-    width: clamp(250px, 90vw, 532px);
+    width: clamp(250px, 90vw, 432px);
     margin-left: 1rem;
     overflow: hidden;
 
     ${CardContainer} {
-        height: clamp(250px, 85vw, 500px);
+        height: clamp(250px, 85vw, 400px);
         width: clamp(250px, 85vw, 634px);
     }
 
